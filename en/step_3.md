@@ -29,9 +29,18 @@ You've asked the user for information, now you need to get the answer!
     set [showerMinutes v] to (answer)
 ```
 
-+ Time for a bit of math! Create another variable called `totalWater`{:class="blockdata"} and add the `set totalWater to`{:class="blockdata"} to your code.
+Time for a bit of math! 
 
-+ Go to the **operators** blocks and look for this block
++ Create another variable called `totalWater`{:class="blockdata"} and set its value to `0` at the start of the program.
+
+```blocks
+    when green flag clicked
+    set [totalWater v] to [0]
+```
+
++ Add a `change totalWater by`{:class="blockdata"} to your code.
+
++ Go to **operators** and look for this block
 
 ```blocks
     () * ()
@@ -42,25 +51,29 @@ It lets you **multiply** two numbers.
 + Drag it into your `set [totalWater v] to []`{:class="blockdata"} block, like this:
 
 ```blocks
-    set [totalWater v] to (() * ())
+    change [totalWater v] by (() * ())
 ```
 
 + Plug your `showerMinutes`{:class="blockdata"} block into one side of the operator block and in the other side, type in the number `7`.
 
 ```blocks
     when green flag clicked
+    set [totalWater v] to [0]
     ask [How many minutes do you usually spend in the shower?] and wait
     set [showerMinutes v] to (answer)
-    set [totalWater v] to ((showerMinutes) * (7))
+    change [totalWater v] by ((showerMinutes) * (7))
 ```
 
-+ Finish off the code with a couple of `say`{:class="blocklooks"} to tell the user the answer! You'll find the `join`{:class=:"blockoperators"} block in **operators**.
++ Finish off the code with a couple of `say`{:class="blocklooks"} to tell the user the answer! You'll find the `join`{:class=:"blockoperator"} block in **operators**.
 
 ```blocks
     when green flag clicked
+    set [totalWater v] to [0]
     ask [How many minutes do you usually spend in the shower?] and wait
     set [showerMinutes v] to (answer)
-    set [totalWater v] to ((showerMinutes) * (7))
+    change [totalWater v] by ((showerMinutes) * (7))
     say [You use...] for (2) secs
-    say (join(totalWater) ( litres of water per shower!)) for (5) secs
+    say (join(totalWater) [ litres of water per shower!]) for (5) secs
 ```
+
++ Click the green flag to test your code.
