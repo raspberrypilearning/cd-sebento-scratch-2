@@ -1,11 +1,17 @@
-## Make a water calculator
+## Calculate water usage
 
-+ Open a new Scratch project and go to the Scripts tab for the cat sprite.
++ Open a new Scratch project and go to the Costumes tab for the cat sprite.
 
-+ Add the following blocks. You will find the `ask and wait`{:class="blocksensing"} block in the **sensing** category.
++ Add a new costume from the library. Choose a character that will do some talking. I'm using this monkey:
+
+![The talking monkey costume](images/askMonkeyCostume.png)
+
++ Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="blocksensing"} block in the **sensing** category.
 
 ```blocks
     when green flag clicked
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [What's your name?] and wait
 ```
 
@@ -25,6 +31,8 @@ You've asked the user for information, now you need to get the answer!
 
 ```blocks
     when green flag clicked
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
 ```
@@ -55,16 +63,20 @@ It lets you **multiply** two numbers.
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
 ```
 
-+ Finish off the code with a couple of `say`{:class="blocklooks"} to tell the user the answer! You'll find the `join`{:class=:"blockoperator"} block in **operators**.
++ Finish off the code with a couple of `say`{:class="blocklooks"} to tell the user the answer! You'll find the `join`{:class="blockoperators"} block in **operators**.
 
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -120,6 +132,8 @@ Your code should look something like this now:
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -145,6 +159,8 @@ Here's how your code would look:
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
+    set size to (80%)
+    switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
