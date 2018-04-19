@@ -67,7 +67,7 @@ It lets you **multiply** two numbers.
     set [totalWater v] to [0]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (7))
+    change [totalWater v] by ((flushes) * (6))
     say [You use...] for (2) secs
     say (join(totalWater) [ litres of water each week!]) for (5) secs
 ```
@@ -76,11 +76,9 @@ It lets you **multiply** two numbers.
 
 --- challenge ---
 
-## Challenge: Add more things
+## Challenge: Add more water uses to the calculator
 
-+ Add another question to find out how many showers the person has per week.
-
-+ Calculate how many litres of water this uses and add it to the total. 
++ Add another question to find out how many showers the person has per week. Then calculate how many litres of water this uses and add it to the total. 
 
 Note: A shower uses about 7 litres per minute, so a 5 minute shower uses around 35 litres.
 
@@ -124,7 +122,7 @@ Your code should look something like this now:
     set [totalWater v] to [0]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
-    change [totalWater v] by (flushes) * (6)
+    change [totalWater v] by ((flushes) * (6))
     ask [How many showers do you have per week?] and wait
     set [showers v] to (answer)
     change [totalWater v] by ((showers) * (35))
@@ -149,7 +147,7 @@ Here's how your code would look:
     set [totalWater v] to [0]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
-    change [totalWater v] by (flushes) * (6)
+    change [totalWater v] by ((flushes) * (6))
     ask [How many minutes do you usually spend in the shower?] and wait
     set [showerMinutes v] to (answer)
     ask [How many showers do you have per week?] and wait
