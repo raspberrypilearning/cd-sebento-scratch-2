@@ -108,11 +108,12 @@ You can double click the `clear`{:class="blockpen"} block to remove everything t
 
 --- /collapse ---
 
-+ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="blockpen"} block to the top of your script, right after the green flag.
++ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="blockpen"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="blockmotion"} block.
 
 ```blocks
     when green flag clicked
     clear
+    go to x:(0) y:(0)
 ```
 
 --- challenge ---
