@@ -10,7 +10,7 @@
 
 ```blocks
     when green flag clicked
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [What's your name?] and wait
 ```
@@ -31,7 +31,7 @@ You've asked the user for information, now you need to get the answer!
 
 ```blocks
     when green flag clicked
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
@@ -63,19 +63,19 @@ It lets you **multiply** two numbers.
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
 ```
 
-+ Finish off the code with a couple of `say`{:class="blocklooks"} to tell the user the answer! You'll find the `join`{:class="blockoperators"} block in **operators**.
++ Finish off the script with a couple of `say`{:class="blocklooks"} blocks to tell the user the result! You'll find the `join`{:class="blockoperators"} block in **operators**.
 
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
@@ -88,7 +88,7 @@ It lets you **multiply** two numbers.
 
 --- challenge ---
 
-## Challenge: Add more water uses to the calculator
+## Challenge: Add more water uses to the calculation
 
 + Add another question to find out how many showers the person has per week. Then calculate how many litres of water this uses and add it to the total. 
 
@@ -132,7 +132,7 @@ Your code should look something like this now:
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
@@ -159,7 +159,7 @@ Here's how your code would look:
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)

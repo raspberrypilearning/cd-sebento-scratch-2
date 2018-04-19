@@ -4,6 +4,8 @@
 
 ![The grey rectangular button costume](images/drawBlankButton.png)
 
+[[[generic-scratch-rename-sprite]]]
+
 + You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be "Tap running for 1 minute" and the `Toilet` is "Flushing the toilet". To add text to your costume you can click on the **T** icon.
 
 ![The T icon for adding text to a picture](images/drawTicon.png)
@@ -14,7 +16,7 @@
 
 + Add another costume to your cat sprite, choosing the glass of water from the library.
 
-![The glass of water costume](image/drawGlassCostume.png)
+![The glass of water costume](images/drawGlassCostume.png)
 
 + Then add the following blocks to the end of your code:
 
@@ -23,10 +25,10 @@
     say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
     say [...a running tap loses 6 litres of water per minute?] for (3) secs
     switch costume to [glass water-a v]
-    set size to (35%)
+    set size to (35) %
 ```
 
-+ Run your code to test it.
++ Click the green flag to test your program.
 
 --- collapse ---
 ---
@@ -47,7 +49,7 @@ If, like me, you don't want to go through the **whole** program every time you w
     say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
     say [...a running tap loses 6 litres of water per minute?] for (3) secs
     switch costume to [glass water-a v]
-    set size to (35%)
+    set size to (35) %
 ```
 
 + When you're ready, you can put everything back together again.
@@ -56,7 +58,7 @@ If, like me, you don't want to go through the **whole** program every time you w
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
-    set size to (80%)
+    set size to (80) %
     switch costume to [monkey2-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
@@ -72,7 +74,7 @@ If, like me, you don't want to go through the **whole** program every time you w
     say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
     say [...a running tap loses 6 litres of water per minute?] for (3) secs
     switch costume to [glass water-a v]
-    set size to (35%)
+    set size to (35) %
 ```
 
 --- /collapse ---
@@ -90,6 +92,8 @@ If, like me, you don't want to go through the **whole** program every time you w
 ```
 
 + Click the green flag to watch your new animation!
+
++ You might need to change the `move 45 steps`{:class="blockmotion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
 
 --- collapse ---
 ---
