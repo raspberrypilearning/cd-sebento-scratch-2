@@ -125,3 +125,5 @@ One thing is missing. The value of `counter`{:class="blockdata"} is `0` at the m
         wait (0.5) secs
     end
 ```
+
+On the next card you will learn how to make your code even shorter with another clever loop!
