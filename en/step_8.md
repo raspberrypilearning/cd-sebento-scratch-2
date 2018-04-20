@@ -83,5 +83,5 @@ Here is how the whole program looks now, so you can check it if something is not
     say [Think about ways you could use less water!] for (5) secs
 ```
 
---- /collapse
+--- /collapse ---
 
