@@ -35,7 +35,7 @@
 title: Do I have to wait for the old code to run all the time?
 ---
 
-If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move it out of the way for the moment!
+If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move the parts you don't need out of the way for the moment!
 
 + Detatch all the code from the previous card from the green flag block and drag it off to one side – but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
 
@@ -76,6 +76,8 @@ If, like me, you don't want to go through the **whole** program every time you w
     switch costume to [glass water-a v]
     set size to (35) %
 ```
+
+Note: you should be careful when doing this as sometimes there might be blocks that you need to run in the code you're moving aside – you'll need to keep them in your script to avoid problems!
 
 --- /collapse ---
 

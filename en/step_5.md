@@ -39,9 +39,9 @@ Now you will use the values from your list to tell the loop how many times to re
     item (1 v) of [WaterAmounts v]
 ```
 
-+ Find your `repeat` loop for the Tap and plug in the above block instead of the number `6` you typed in earlier.
++ Find your `repeat`{:class="blockcontrol"} loop for the Tap and plug in the above block instead of the number `6` you typed in earlier.
 
-+ Now do the same for the second `repeat`{:class="blockcontrol"} loop, the one for Toilet.
++ Do the same for the second `repeat`{:class="blockcontrol"} loop, the one for Toilet.
 
 + In the block you put into the second `repeat`{:class="blockcontrol"} loop, click on the `1` and change it by typing in the number `2`.
 
@@ -85,4 +85,4 @@ This number is called the **index**.
 
 You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="blockcontrol"} block.
 
-So you've managed to replace one set of numbers with a list. But how about doing the same with the sprites that match up with those numbers? You'll do this on the next card!
+So you've managed to replace one set of numbers with a list. How about doing the same with the sprites that match up with those numbers? You'll do this on the next card!
