@@ -116,11 +116,7 @@ You can double click the `clear`{:class="blockpen"} block to remove everything t
     go to x:(0) y:(0)
 ```
 
---- challenge ---
-
-## Challenge: Add a graphic for flushing the toilet
-
-+ Can you add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet?
++ Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
 
 --- hints ---
 
@@ -149,5 +145,3 @@ You can double click the `clear`{:class="blockpen"} block to remove everything t
 --- /hint ---
 
 --- /hints ---
-
---- /challenge ---
