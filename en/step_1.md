@@ -1,6 +1,6 @@
 ## Introduction
 
-In this project you will make an interactive water calculator to make people think about how much water they use. You'll also write code to draw a chart to compare the amount of water used in various different activities.
+In this project you will make an interactive water calculator to make people think about how much water they use. You'll also write code that draws a chart to compare the amount of water used in various different activities.
 
 ### What you will make
 

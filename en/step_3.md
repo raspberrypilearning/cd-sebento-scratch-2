@@ -1,4 +1,6 @@
-## Calculate water usage
+## Getting information from the user
+
+On this card you'll make the water usage calculator. To personalise the calculation for whoever is using the program, you'll use a new block to ask the user questions that they can type in answers to.
 
 + Open a new Scratch project and go to the Costumes tab for the cat sprite.
 

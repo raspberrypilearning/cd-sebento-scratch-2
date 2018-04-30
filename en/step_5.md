@@ -1,5 +1,7 @@
 ## Using a list
 
+Instead of typing the amounts of water directly into the `repeat until`{:class="blockcontrol"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, well, a list!
+
 + Go to the **data** blocks and click **Make a List**.
 
 + Enter `WaterAmounts` as the name and click **OK**.

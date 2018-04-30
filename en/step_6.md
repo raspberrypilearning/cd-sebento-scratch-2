@@ -1,5 +1,7 @@
 ## Matching things up
 
+Now that you've got the water amounts in a list, you're going to put the sprite names in another list. Since the sprite names and the water amounts are related to each other, you'll be using the same counter variable to keep track of which list item you're on in both lists.
+
 + Make another list, called `Sprites`.
 
 + Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the Tap and Toilet sprites!

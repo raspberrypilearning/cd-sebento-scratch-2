@@ -1,5 +1,7 @@
 ## Draw a chart
 
+Let's draw a chart to help the user understand the quantities of water more easily than if you just told them all the numbers.
+
 + Make two new sprites called `Tap` and `Toilet`. Select this costume for both (it's in **Things**):
 
 ![The grey rectangular button costume](images/drawBlankButton.png)

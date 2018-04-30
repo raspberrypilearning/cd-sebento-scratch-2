@@ -1,5 +1,7 @@
 ## Final tweaks
 
+On this card you'll make a few small changes to control things like the speed of the animation. Customise the changes to suit your own program!
+
 + Change the number of steps after the `stamp`{:class="blockpen"} from `20` to `4`. You'll probably need make the first `move`{:class="blockmotion"} bigger, try `60` instead of `45`, to get the glass of water out from behind the text sprite again.
 
 + Move the `wait`{:class="blockcontrol"} out of the first loop, putting it after the loop instead, but still inside the `repeat until`{:class="blockcontrol"}, and change the value to `1` or `2` seconds, or whatever you like.
