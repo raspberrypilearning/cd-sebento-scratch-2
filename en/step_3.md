@@ -1,6 +1,6 @@
 ## Getting information from the user
 
-On this card you'll make the water usage calculator. To personalise the calculation for whoever is using the program, you'll use a new block to ask the user questions that they can type in answers to.
+On this card you'll make the water usage calculator. To personalise the calculation for your program's user, you'll use a new block to ask them questions that they can type in answers to.
 
 + Open a new Scratch project and go to the Costumes tab for the cat sprite.
 
@@ -8,7 +8,7 @@ On this card you'll make the water usage calculator. To personalise the calculat
 
 ![The talking monkey costume](images/askMonkeyCostume.png)
 
-+ Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="blocksensing"} block in the **sensing** category.
++ Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="blocksensing"} block in the **Sensing** category.
 
 ```blocks
     when green flag clicked
@@ -19,15 +19,15 @@ On this card you'll make the water usage calculator. To personalise the calculat
 
 + Change the question to `How many times do you flush the toilet each week?`{:class="blocksensing"} .
 
-You've asked the user for information, now you need to get the answer! 
+You've asked the user for information — now you need to get the answer! 
 
-+ First, create a variable called `flushes`{:class="blockdata"}. You will use it to store the answer.
++ First, create a variable called `flushes`{:class="blockdata"}. You will use it to store the user's answer.
 
 [[[generic-scratch-add-variable]]]
 
-+ Drag out the `set flushes to`{:class="blockdata"} block from **data**.
++ Drag out the `set flushes to`{:class="blockdata"} block from **Data**.
 
-+ Then, look in the **sensing** blocks and find the `answer`{:class="blocksensing"} block. This is a special variable that Scratch has where it puts the most recent answer it's received from an `ask and wait`{:class="blocksensing"}
++ Then, look in the **Sensing** section and find the `answer`{:class="blocksensing"} block. This is a special variable where a Scratch program puts the most recent answer it's received from an `ask and wait`{:class="blocksensing"} block.
 
 + Plug the block into your code like this:
 
@@ -39,14 +39,16 @@ You've asked the user for information, now you need to get the answer!
     set [flushes v] to (answer)
 ```
 
-+ Time for a bit of math! First you need somewhere to store a total. Create another variable called `totalWater`{:class="blockdata"} and set its value to `0` at the start of the program.
+Time for a bit of math! First you need somewhere to store a total.
+
++ Create another variable called `totalWater`{:class="blockdata"} and set its value to `0` at the start of the program.
 
 ```blocks
     when green flag clicked
     set [totalWater v] to [0]
 ```
 
-+ Go to **operators** and look for this block
++ Go to **Operators** and look for this block:
 
 ```blocks
     () * ()
@@ -60,7 +62,7 @@ It lets you **multiply** two numbers.
     change [totalWater v] by (() * ())
 ```
 
-+ Plug your `flushes`{:class="blockdata"} block into one side of the operator block and in the other side, type in the number `6` (6 litres is roughly how much water is used by flushing the toilet once).
++ Plug your `flushes`{:class="blockdata"} block into one side of the operator block and on the other side, type in the number `6`. 6 litres is roughly how much water is used for one toilet flush.
 
 ```blocks
     when green flag clicked
@@ -72,7 +74,7 @@ It lets you **multiply** two numbers.
     change [totalWater v] by ((flushes) * (6))
 ```
 
-+ Finish off the script with a couple of `say`{:class="blocklooks"} blocks to tell the user the result! You'll find the `join`{:class="blockoperators"} block in **operators**.
++ Finish off the script with a couple of `say`{:class="blocklooks"} blocks to tell the user the result! You'll find the `join`{:class="blockoperators"} block in **Operators**.
 
 ```blocks
     when green flag clicked
@@ -90,11 +92,11 @@ It lets you **multiply** two numbers.
 
 --- challenge ---
 
-## Challenge: Add more water uses to the calculation
+## Challenge: add more water uses to the calculation
 
 + Add another question to find out how many showers the person has per week. Then calculate how many litres of water this uses and add it to the total. 
 
-Note: A shower uses about 7 litres per minute, so a 5 minute shower uses around 35 litres.
+A shower uses about 7 litres per minute, so a five-minute shower uses around 35 litres.
 
 --- hints ---
 
@@ -113,7 +115,7 @@ Note: A shower uses about 7 litres per minute, so a 5 minute shower uses around 
 
 --- hint ---
 
-+ To calculate the amount of water they use on showers, you'll need to multiply the number of showers by `35` (the amount of water for one 5 minute shower).
++ To calculate the amount of water used on showering, you'll need to multiply the number of showers by `35` (the amount of water for one five-minute shower).
 
 ```blocks
     (showers) * (35)
@@ -150,7 +152,7 @@ Your code should look something like this now:
 
 --- hint ---
 
-If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by 7 and then multiply that by the number of showers. You can put an operator inside an operator to do that:
+If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by `7` (litres per minute in the shower), and then multiply the result by the number of showers. You can put an operator inside an operator to do that, like this:
 
 ```blocks
     (showers) * ((showerMinutes) * (7))
