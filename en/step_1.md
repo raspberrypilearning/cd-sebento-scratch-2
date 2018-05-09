@@ -15,6 +15,6 @@ Here is an example of the project you will make:
 
 + The Pen tool
 + Using and updating variables in loops
-+ Repeat Until loops
++ Using `repeat until` loops
 + Getting input values with Ask blocks
 + Using multiple lists with properties related by index
