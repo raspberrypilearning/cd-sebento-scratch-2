@@ -8,11 +8,11 @@ Let's draw a chart to help the user understand the quantities of water more easi
 
 [[[generic-scratch-rename-sprite]]]
 
-+ You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be "Tap running for 1 minute" and the `Toilet` is "Flushing the toilet". To add text to your costume you can click on the **T** icon.
++ You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be labelled with "Tap running for 1 minute" and the `Toilet` with "Flushing the toilet". To add text to your costume you can click on the **T** icon:
 
 ![The T icon for adding text to a picture](images/drawTicon.png)
 
-+ Place the two sprites one above the other on the left hand side of the stage.
++ Place the two sprites one above the other on the left hand side of the stage:
 
 ![The two button sprites placed at the left edge](images/drawSpritesOnLeft.png)
 
@@ -39,7 +39,7 @@ title: Do I have to wait for the old code to run all the time?
 
 If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move the parts you don't need out of the way for the moment!
 
-+ Detatch all the code from the previous card from the green flag block and drag it off to one side – but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
++ Detach all the code from the previous card from the green flag block and drag it off to one side — but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
 
 ![The code moved to one side away from the green flag](images/drawMoveCodeAside.png)
 
@@ -79,11 +79,11 @@ If, like me, you don't want to go through the **whole** program every time you w
     set size to (35) %
 ```
 
-Note: you should be careful when doing this as sometimes there might be blocks that you need to run in the code you're moving aside – you'll need to keep them in your script to avoid problems!
+**Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
 
 --- /collapse ---
 
-+ Add the following blocks to the end of your script. You'll find the `stamp`{:class="blockpen"} block in the **pen** category.
++ Add the following blocks to the end of your script. You'll find the `stamp`{:class="blockpen"} block in the **Pen** category.
 
 ```blocks
     go to [Tap v]
@@ -108,7 +108,7 @@ The `stamp`{:class="blockpen"} block makes a sprite stamp an image of itself ont
 
 It draws the image straight onto the background, so no new sprites are created.
 
-You can double click the `clear`{:class="blockpen"} block to remove everything that was added with **pen** blocks, or you can add it to your code to clear everything automatically in your program.
+You can double-click the `clear`{:class="blockpen"} block to remove everything that was added with **Pen** blocks.
 
 --- /collapse ---
 
@@ -126,9 +126,9 @@ You can double click the `clear`{:class="blockpen"} block to remove everything t
 
 --- hint ---
 
-+ Use the `go to mouse-pointer`{:class="blockmotion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle.
++ Use the `go to mouse-pointer`{:class="blockmotion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
 
-+ Repeat the stamp code `6` times, which is the number of litres of water used.
++ Repeat the stamp code `6` times, which is the number of litres of water used per flush.
 
 --- /hint ---
 
