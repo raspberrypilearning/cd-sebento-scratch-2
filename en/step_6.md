@@ -2,21 +2,21 @@
 
 Now that you've got the water amounts in a list, you're going to put the sprite names in another list. Since the sprite names and the water amounts are related to each other, you'll be using the same counter variable to keep track of which list item you're on in both lists.
 
-+ Make another list, called `Sprites`.
++ Make another list and call it `Sprites`.
 
-+ Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the Tap and Toilet sprites!
++ Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the `Tap` and `Toilet` sprites!
 
 ![The list of sprite names](images/list2SpriteNames.png)
 
 + Once you're done adding things to the list, you can hide it from the stage.
 
-+ Now look at your script with the loops and find the two `go to`{:class="blockmotion"} blocks that make the talking sprite move to the Tap and the Toilet sprites.
++ Now look at your script with the loops and find the two `go to`{:class="blockmotion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
 
 ```blocks
     go to [Tap v]
 ```
 
-+ Just like you did before, drag an `item`{:class="blockdata"} block into each one – it doesn't look like you can place something else into the box but you can! Give it a try.
++ Just like you did before, drag an `item`{:class="blockdata"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
 
 ```blocks
     go to (item (1 v) of [Sprites v])
@@ -41,11 +41,11 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
     end
 ```
 
-Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now.
+Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
 
 + Create a new variable called `counter`{:class="blockdata"}.
 
-+ At the start of the program, set the value of `counter`{:class="blockdata"} to `0`;
++ At the start of the program, set the value of `counter`{:class="blockdata"} to `0`:
 
 ```blocks
     when green flag clicked
@@ -62,7 +62,7 @@ Do you see that you are now using the same **index** to select the sprite name f
     repeat (item (counter) of [WaterAmounts v])
 ```
 
-One thing is missing. The value of `counter`{:class="blockdata"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this you will add `1`. This is also known as **incrementing** it.
+One thing is still missing: the value of `counter`{:class="blockdata"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
 
 + Add in two `change counter by 1`{:class="blockdata"} blocks into your code so that it looks like this:
 
