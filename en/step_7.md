@@ -15,14 +15,14 @@ Right now you have two sets of code blocks in your script that are identical:
 
 If you were to add more sprites to illustrate amounts of water for other things like showers or washing dishes, this would very quickly get out of hand! Seems like these blocks should be inside a loop of some sort, right?
 
-+ On your script, detach the first `change counter by 1`{:class="blockdata"} block and everything after it and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are
++ On your script, detach the first `change counter by 1`{:class="blockdata"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
 
 ```blocks
     switch costume to [glass water-a v]
     set size to (35) %
 ```
 
-+ Look in the **control** category and take out this block:
++ Look in the **Control** section and take out this block:
 
 ```blocks
     repeat until <>
@@ -31,7 +31,7 @@ If you were to add more sprites to illustrate amounts of water for other things 
 
 + Attach it after the `set size to 35%`{:class="blocklooks"} block.
 
-+ Then take one group of the the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
++ Then take one group of the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
 
 ```blocks
     switch costume to [glass water-a v]
@@ -48,7 +48,7 @@ If you were to add more sprites to illustrate amounts of water for other things 
     end
 ```
 
-Finally, you need to put something in the `until`{:class="blockcontrol"}! You want the code to repeat for each item in the lists, so a good thing to check for would be if the the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **data**:
+Finally, you need to put something in the `until`{:class="blockcontrol"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Data**:
 
 ```blocks
     length of [Sprites v]
@@ -67,9 +67,9 @@ Finally, you need to put something in the `until`{:class="blockcontrol"}! You wa
     end
 ```
 
-+ Grab the `counter`{:class="blockdata"} block and plug it into the left hand side of the operator block.
++ Grab the `counter`{:class="blockdata"} block and plug it into the left-hand side of the operator block.
 
-+ Then, from **data**, place the `length of`{:class="blockdata"} block into the right hand side of the operator.
++ Then, from **Data**, place the `length of`{:class="blockdata"} block into the right-hand side of the operator.
 
 ```blocks
     repeat until <(counter) = (length of [Sprites v])>
@@ -85,15 +85,15 @@ You've used the `repeat`{:class="blockcontrol"} with a number to tell Scratch ho
 
 But if you add more things to your lists of sprites and water amounts, you'll have to change the code each time to update the the `repeat`{:class="blockcontrol"} number. 
 
-With a `repeat until`{:class="blockcontrol"} block, the code checks how many times it needs to repeat so you don't have to!
+With a `repeat until`{:class="blockcontrol"} block, the code checks how many times it needs to repeat so that you don't have to!
 
 --- /collapse ---
 
-+ Click the green flag to see your new and improved script run – it does the same thing using half the amount of blocks!
++ Click the green flag to see your new and improved script run — it does the same thing using half the amount of blocks!
 
-Let's really make the most of this new loop and display some more water usage information to the program.
+Let's really make the most of this new loop and make the program display some more water usage information.
 
-+ Create 5 more sprites, naming them `Shower`, `Bath`, `Dishwasher`, `Dishes`, and `Washing`. You can give them more descriptive text on their costumes if you want to.
++ Create five more sprites, naming them `Shower`, `Bath`, `Dishwasher`, `Dishes`, and `Washing`. You can give them more descriptive text on their costumes if you want to.
 
 ![All the sprites showing watery household activities](images/finalSprites.png)
 
@@ -101,7 +101,7 @@ Here are the descriptions I've used:
 
 | Sprite name | Text description | 
 |-----|-------|
-| Shower | 5 minute shower |
+| Shower | 5-minute shower |
 | Bath | A bath |
 | Dishwasher | Dishwasher |
 | Dishes | Handwash dishes|
@@ -123,6 +123,6 @@ Here are the descriptions I've used:
 
 ![The two lists full of water data](images/finalDataLists.png)
 
-+ Finally, hide the lists again by unticking the checkboxes next to the code blocks, and click the green flag to run the code. You should see all the new water amounts get animated – that was without having to add any new code! Cool, right?
++ Finally, hide the lists again by unticking the checkboxes next to the code blocks, and click the green flag to run the code. You should see all the new water amounts get animated — without having to add any new code! Cool, right?
 
 You might notice some of the items run out of space on the screen because the amount of water is so huge, and maybe you want to speed up the animation a little. The next card will show you some small tweaks you can make to fix all this.
