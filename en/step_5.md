@@ -1,8 +1,8 @@
 ## Using a list
 
-Instead of typing the amounts of water directly into the `repeat until`{:class="blockcontrol"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, well, a list!
+Instead of typing the amounts of water directly into the `repeat until`{:class="blockcontrol"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
 
-+ Go to the **data** blocks and click **Make a List**.
++ Go to the **Data** section of blocks and click **Make a List**.
 
 + Enter `WaterAmounts` as the name and click **OK**.
 
@@ -19,31 +19,29 @@ Your list will appear on the stage.
 title: Removing an item
 ---
 
-+ If you want to remove items from the list, you can.
-
-+ Click on the item you want to delete, then click the little `x` that appears next to it.
++ If you want to remove items from the list, you can click on the item you want to delete, then click the little `x` that appears next to it.
 
 ![Deleting a list item](images/listDeleteItem.png)
 
 --- /collapse ---
 
-+ Add another item for your second illustration, flushing the toilet. The value for this one is `6` as well.
++ Add another item for your second illustration for flushing the toilet. The value for this one is `6` as well.
 
-+ You can untick the checkbox next to your list in the **data** blocks to hide it from the stage.
++ You can untick the checkbox next to your list in the **Data** section to hide it from the stage.
 
 ![The checkbox to show or hide a list](images/listUntickShow.png)
 
 Now you will use the values from your list to tell the loop how many times to repeat.
 
-+ Look for this block in the blocks for you list in **data**:
++ Look for this block in the blocks for you list in **Data**:
 
 ```blocks
     item (1 v) of [WaterAmounts v]
 ```
 
-+ Find your `repeat`{:class="blockcontrol"} loop for the Tap and plug in the above block instead of the number `6` you typed in earlier.
++ Find your `repeat`{:class="blockcontrol"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
 
-+ Do the same for the second `repeat`{:class="blockcontrol"} loop, the one for Toilet.
++ Do the same for the second `repeat`{:class="blockcontrol"} loop, the one for `Toilet`.
 
 + In the block you put into the second `repeat`{:class="blockcontrol"} loop, click on the `1` and change it by typing in the number `2`.
 
