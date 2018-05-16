@@ -4,7 +4,7 @@ description: Make a water usage calculator, with animated charts.
 theme: orange
 version: 1
 listed: false
-copyedit: false
+copyedit: true
 last_tested: "2018-04-12"
 steps:
   - title: Introduction
