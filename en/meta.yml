@@ -2,9 +2,15 @@ title: Intermediate Scratch Sushi Cards
 hero_image: images/banner.png
 description: Make a water usage calculator, with animated charts.
 theme: orange
-version: 1
 listed: true
 copyedit: true
+curriculum: ''
+interests: ''
+technologies: scratch
+site_areas: coderdojo, projects
+hardware: ''
+software: scratch
+version: 3.0.0
 last_tested: "2018-04-12"
 steps:
   - title: Introduction
