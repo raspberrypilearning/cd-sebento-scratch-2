@@ -1,164 +1,61 @@
-## Getting information from the user
+## Draw a chart
 
-On this card you'll make the water usage calculator. To personalise the calculation for your program's user, you'll use a new block to ask them questions that they can type in answers to.
+Let's draw a chart to help the user understand the quantities of water more easily than if you just told them all the numbers.
 
-+ Open a new Scratch project and go to the Costumes tab for the cat sprite.
++ Make two new sprites called `Tap` and `Toilet`. Select this costume for both (it's in **Things**):
 
-+ Add a new costume from the library. Choose a character that will do some talking. I'm using this monkey:
+![The grey rectangular button costume](images/drawBlankButton.png)
 
-![The talking monkey costume](images/askMonkeyCostume.png)
+[[[generic-scratch-rename-sprite]]]
 
-+ Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="blocksensing"} block in the **Sensing** category.
++ You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be labelled with "Tap running for 1 minute" and the `Toilet` with "Flushing the toilet". To add text to your costume you can click on the **T** icon:
+
+![The T icon for adding text to a picture](images/drawTicon.png)
+
++ Place the two sprites one above the other on the left hand side of the stage:
+
+![The two button sprites placed at the left edge](images/drawSpritesOnLeft.png)
+
++ Add another costume to your cat sprite, choosing the glass of water from the library.
+
+![The glass of water costume](images/drawGlassCostume.png)
+
++ Then add the following blocks to the end of your code:
+
+```blocks
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
+```
+
++ Click the green flag to test your program.
+
+--- collapse ---
+---
+title: Do I have to wait for the old code to run all the time?
+---
+
+If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move the parts you don't need out of the way for the moment!
+
++ Detach all the code from the previous card from the green flag block and drag it off to one side — but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
+
+![The code moved to one side away from the green flag](images/drawMoveCodeAside.png)
+
++ Then attach your new code directly onto the green flag.
 
 ```blocks
     when green flag clicked
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [What's your name?] and wait
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
 ```
 
-+ Change the question to `How many times do you flush the toilet each week?`{:class="blocksensing"} .
++ When you're ready, you can put everything back together again.
 
-You've asked the user for information — now you need to get the answer! 
-
-+ First, create a variable called `flushes`{:class="blockdata"}. You will use it to store the user's answer.
-
-[[[generic-scratch-add-variable]]]
-
-+ Drag out the `set flushes to`{:class="blockdata"} block from **Data**.
-
-+ Then, look in the **Sensing** section and find the `answer`{:class="blocksensing"} block. This is a special variable where a Scratch program puts the most recent answer it's received from an `ask and wait`{:class="blocksensing"} block.
-
-+ Plug the block into your code like this:
-
-```blocks
-    when green flag clicked
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-```
-
-Time for a bit of math! First you need somewhere to store a total.
-
-+ Create another variable called `totalWater`{:class="blockdata"} and set its value to `0` at the start of the program.
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-```
-
-+ Go to **Operators** and look for this block:
-
-```blocks
-    () * ()
-```
-
-It lets you **multiply** two numbers.
-
-+ Drag it into a `change totalWater by`{:class="blockdata"} block, like this:
-
-```blocks
-    change [totalWater v] by (() * ())
-```
-
-+ Plug your `flushes`{:class="blockdata"} block into one side of the operator block and on the other side, type in the number `6`. 6 litres is roughly how much water is used for one toilet flush.
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-```
-
-+ Finish off the script with a couple of `say`{:class="blocklooks"} blocks to tell the user the result! You'll find the `join`{:class="blockoperators"} block in **Operators**.
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water each week!]) for (5) secs
-```
-
-+ Click the green flag to test your code.
-
---- challenge ---
-
-## Challenge: add more water uses to the calculation
-
-+ Add another question to find out how many showers the person has per week. Then calculate how many litres of water this uses and add it to the total. 
-
-A shower uses about 7 litres per minute, so a five-minute shower uses around 35 litres.
-
---- hints ---
-
---- hint ---
-
-+ You'll need to create a variable to store the number of showers per week. 
-
-+ Use the `ask and wait`{:class="blocksensing"} and `answer`{:class="blocksensing"} blocks to get the information from the user and store it in the new variable.
-
-```blocks
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-```
-
---- /hint ---
-
---- hint ---
-
-+ To calculate the amount of water used on showering, you'll need to multiply the number of showers by `35` (the amount of water for one five-minute shower).
-
-```blocks
-    (showers) * (35)
-```
-
-+ You can add the result to your total like this:
-
-```blocks
-    change [totalWater v] by ((showers) * (35))
-```
-
---- /hint ---
-
---- hint ---
-
-Your code should look something like this now:
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * (35))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-```
-
---- /hint ---
-
---- hint ---
-
-If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by `7` (litres per minute in the shower), and then multiply the result by the number of showers. You can put an operator inside an operator to do that, like this:
-
-```blocks
-    (showers) * ((showerMinutes) * (7))
-```
-
-Here's how your code would look:
 
 ```blocks
     when green flag clicked
@@ -175,9 +72,80 @@ Here's how your code would look:
     change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
     say [You use...] for (2) secs
     say (join(totalWater) [ litres of water per week!]) for (5) secs
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
 ```
+
+**Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
+
+--- /collapse ---
+
++ Add the following blocks to the end of your script. You'll find the `stamp`{:class="blockpen"} block in the **Pen** category.
+
+```blocks
+    go to [Tap v]
+    move (45) steps
+    repeat (6)
+        move (20) steps
+        stamp
+        wait (0.5) secs
+    end
+```
+
++ Click the green flag to watch your new animation!
+
++ You might need to change the `move 45 steps`{:class="blockmotion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
+
+--- collapse ---
+---
+title: How does it work?
+---
+
+The `stamp`{:class="blockpen"} block makes a sprite stamp an image of itself onto the stage.
+
+It draws the image straight onto the background, so no new sprites are created.
+
+You can double-click the `clear`{:class="blockpen"} block to remove everything that was added with **Pen** blocks.
+
+--- /collapse ---
+
++ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="blockpen"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="blockmotion"} block.
+
+```blocks
+    when green flag clicked
+    clear
+    go to x:(0) y:(0)
+```
+
++ Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
+
+--- hints ---
+
+--- hint ---
+
++ Use the `go to mouse-pointer`{:class="blockmotion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
+
++ Repeat the stamp code `6` times, which is the number of litres of water used per flush.
+
+--- /hint ---
+
+--- hint ---
+
++ Here is the code you need to add:
+
+```blocks
+    go to [Toilet v]
+    move (45) steps
+    repeat (6)
+        move (20) steps
+        stamp
+        wait (0.5) secs
+    end
+```
+
 --- /hint ---
 
 --- /hints ---
-
---- /challenge ---

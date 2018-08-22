@@ -1,70 +1,6 @@
-## Matching things up
+## Repetition is key
 
-Now that you've got the water amounts in a list, you're going to put the sprite names in another list. Since the sprite names and the water amounts are related to each other, you'll be using the same counter variable to keep track of which list item you're on in both lists.
-
-+ Make another list and call it `Sprites`.
-
-+ Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the `Tap` and `Toilet` sprites!
-
-![The list of sprite names](images/list2SpriteNames.png)
-
-+ Once you're done adding things to the list, you can hide it from the stage.
-
-+ Now look at your script with the loops and find the two `go to`{:class="blockmotion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
-
-```blocks
-    go to [Tap v]
-```
-
-+ Just like you did before, drag an `item`{:class="blockdata"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
-
-```blocks
-    go to (item (1 v) of [Sprites v])
-```
-
-+ Your code should look like this now:
-
-```blocks
-    go to (item (1 v) of [Sprites v])
-    move (45) steps
-    repeat (item (1 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    go to (item (2 v) of [Sprites v])
-    move (45) steps
-    repeat (item (2 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
-
-Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
-
-+ Create a new variable called `counter`{:class="blockdata"}.
-
-+ At the start of the program, set the value of `counter`{:class="blockdata"} to `0`:
-
-```blocks
-    when green flag clicked
-    set [counter v] to [0]
-```
-
-+ Drag the `counter`{:class="blockdata"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
-
-```blocks
-    go to (item (counter) of [Sprites v])
-```
-
-```blocks
-    repeat (item (counter) of [WaterAmounts v])
-```
-
-One thing is still missing: the value of `counter`{:class="blockdata"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
-
-+ Add in two `change counter by 1`{:class="blockdata"} blocks into your code so that it looks like this:
+Right now you have two sets of code blocks in your script that are identical:
 
 ```blocks
     change [counter v] by (1)
@@ -75,57 +11,118 @@ One thing is still missing: the value of `counter`{:class="blockdata"} is `0` at
         stamp
         wait (0.5) secs
     end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
 ```
 
-+ Run your code to check that everything is still working as it should! Here is what the full program should look like by now:
+If you were to add more sprites to illustrate amounts of water for other things like showers or washing dishes, this would very quickly get out of hand! Seems like these blocks should be inside a loop of some sort, right?
+
++ On your script, detach the first `change counter by 1`{:class="blockdata"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
 
 ```blocks
-    when green flag clicked
-    set [counter v] to [0]
-    clear
-    go to x:(0) y:(0)
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many minutes do you usually spend in the shower?] and wait
-    set [showerMinutes v] to (answer)
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
     switch costume to [glass water-a v]
     set size to (35) %
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
+```
+
++ Look in the **Control** section and take out this block:
+
+```blocks
+    repeat until <>
     end
 ```
 
-On the next card you will learn how to make your code even shorter with another clever loop!
++ Attach it after the `set size to 35%`{:class="blocklooks"} block.
+
++ Then take one group of the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
+
+```blocks
+    switch costume to [glass water-a v]
+    set size to (35) %
+    repeat until <>
+        change [counter v] by (1)
+        go to (item (counter) of [Sprites v])
+        move (45) steps
+        repeat (item (counter) of [WaterAmounts v])
+            move (20) steps
+            stamp
+            wait (0.5) secs
+        end
+    end
+```
+
+Finally, you need to put something in the `until`{:class="blockcontrol"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Data**:
+
+```blocks
+    length of [Sprites v]
+```
+
++ The first thing you'll need is an **operator** block to check if two things are equal:
+
+```blocks
+    [] = []
+```
+
++ Place this into the space in the `repeat until`{:class="blockcontrol"} block:
+
+```blocks
+    repeat until <[] = []]>
+    end
+```
+
++ Grab the `counter`{:class="blockdata"} block and plug it into the left-hand side of the operator block.
+
++ Then, from **Data**, place the `length of`{:class="blockdata"} block into the right-hand side of the operator.
+
+```blocks
+    repeat until <(counter) = (length of [Sprites v])>
+    end
+```
+
+--- collapse ---
+---
+title: About the new loop
+---
+
+You've used the `repeat`{:class="blockcontrol"} with a number to tell Scratch how many times to repeat something. 
+
+But if you add more things to your lists of sprites and water amounts, you'll have to change the code each time to update the the `repeat`{:class="blockcontrol"} number. 
+
+With a `repeat until`{:class="blockcontrol"} block, the code checks how many times it needs to repeat so that you don't have to!
+
+--- /collapse ---
+
++ Click the green flag to see your new and improved script run — it does the same thing using half the amount of blocks!
+
+Let's really make the most of this new loop and make the program display some more water usage information.
+
++ Create five more sprites, naming them `Shower`, `Bath`, `Dishwasher`, `Dishes`, and `Washing`. You can give them more descriptive text on their costumes if you want to.
+
+![All the sprites showing watery household activities](images/finalSprites.png)
+
+Here are the descriptions I've used:
+
+| Sprite name | Text description | 
+|-----|-------|
+| Shower | 5-minute shower |
+| Bath | A bath |
+| Dishwasher | Dishwasher |
+| Dishes | Handwash dishes|
+| Washing | Washing machine |
+
++ Tick the checkboxes to show both your lists on the stage so you can add the new information to them.
+
++ Add all the new sprite names to the `Sprites`{:class="blockdata"} list, making sure to type them exactly correct.
+
++ Then add the water usage to the `WaterAmounts`{:class="blockdata"} list. The table below shows the litres of water for each thing. Make sure you add them in the same order as the sprites, so that their list index numbers match up!
+
+| Sprite | WaterAmount | 
+|-----|-------|
+| Shower | 35 |
+| Bath | 80 |
+| Dishwasher | 15 |
+| Dishes | 10|
+| Washing | 50 |
+
+![The two lists full of water data](images/finalDataLists.png)
+
++ Finally, hide the lists again by unticking the checkboxes next to the code blocks, and click the green flag to run the code. You should see all the new water amounts get animated — without having to add any new code! Cool, right?
+
+You might notice some of the items run out of space on the screen because the amount of water is so huge, and maybe you want to speed up the animation a little. The next card will show you some small tweaks you can make to fix all this.

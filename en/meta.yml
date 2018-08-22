@@ -14,7 +14,6 @@ version: 3.0.0
 last_tested: "2018-04-12"
 steps:
   - title: Introduction
-  - title: What you will need
   - title: Getting information from the user
   - title: Draw a chart
   - title: Using a list
