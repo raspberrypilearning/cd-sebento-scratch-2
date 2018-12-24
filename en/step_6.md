@@ -48,7 +48,7 @@ If you were to add more sprites to illustrate amounts of water for other things 
     end
 ```
 
-Finally, you need to put something in the `until`{:class="block3control"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Data**:
+Finally, you need to put something in the `until`{:class="block3control"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Variables**:
 
 ```blocks3
     length of [Sprites v]
@@ -69,7 +69,7 @@ Finally, you need to put something in the `until`{:class="block3control"}! You w
 
 + Grab the `counter`{:class="block3variables"} block and plug it into the left-hand side of the operator block.
 
-+ Then, from **Data**, place the `length of`{:class="block3variables"} block into the right-hand side of the operator.
++ Then, from **Variables**, place the `length of`{:class="block3variables"} block into the right-hand side of the operator.
 
 ```blocks3
     repeat until <(counter) = (length of [Sprites v])>
@@ -94,8 +94,6 @@ With a `repeat until`{:class="block3control"} block, the code checks how many ti
 Let's really make the most of this new loop and make the program display some more water usage information.
 
 + Create five more sprites, naming them `Shower`, `Bath`, `Dishwasher`, `Dishes`, and `Washing`. You can give them more descriptive text on their costumes if you want to.
-
-![All the sprites showing watery household activities](images/finalSprites.png)
 
 Here are the descriptions I've used:
 

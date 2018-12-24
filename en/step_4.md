@@ -2,7 +2,7 @@
 
 Instead of typing the amounts of water directly into the `repeat until`{:class="block3control"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
 
-+ Go to the **Data** section of blocks and click **Make a List**.
++ Go to the **Variables** section of blocks and click **Make a List**.
 
 + Enter `WaterAmounts` as the name and click **OK**.
 
@@ -27,13 +27,13 @@ title: Removing an item
 
 + Add another item for your second illustration for flushing the toilet. The value for this one is `6` as well.
 
-+ You can untick the checkbox next to your list in the **Data** section to hide it from the stage.
++ You can untick the checkbox next to your list in the **Variables** section to hide it from the stage.
 
 ![The checkbox to show or hide a list](images/listUntickShow.png)
 
 Now you will use the values from your list to tell the loop how many times to repeat.
 
-+ Look for this block in the blocks for you list in **Data**:
++ Look for this block in the blocks for you list in **Variables**:
 
 ```blocks3
     item (1 v) of [WaterAmounts v]

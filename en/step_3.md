@@ -2,7 +2,7 @@
 
 Let's draw a chart to help the user understand the quantities of water more easily than if you just told them all the numbers.
 
-+ Make two new sprites called `Tap` and `Toilet`. Select this costume for both (it's in **Things**):
++ Make two new sprites called `Tap` and `Toilet`. Select this costume for both:
 
 ![The grey rectangular button costume](images/drawBlankButton.png)
 
@@ -61,7 +61,7 @@ If, like me, you don't want to go through the **whole** program every time you w
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))

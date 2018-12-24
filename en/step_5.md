@@ -6,8 +6,6 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
 
 + Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the `Tap` and `Toilet` sprites!
 
-![The list of sprite names](images/list2SpriteNames.png)
-
 + Once you're done adding things to the list, you can hide it from the stage.
 
 + Now look at your script with the loops and find the two `go to`{:class="block3motion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
@@ -94,7 +92,7 @@ One thing is still missing: the value of `counter`{:class="block3variables"} is 
     go to x:(0) y:(0)
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))

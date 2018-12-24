@@ -30,7 +30,7 @@ On this card you'll make a few small changes to control things like the speed of
     end
     hide
     go to x: (0) y:(0)
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     set size to (100) %
     show
     say [Think about ways you could use less water!] for (5) secs
@@ -50,7 +50,7 @@ Here is how the whole program looks now, do you can check it if something in you
     go to x:(0) y:(0)
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -79,7 +79,7 @@ Here is how the whole program looks now, do you can check it if something in you
     end
     hide
     go to x: (0) y:(0)
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     set size to (100) %
     show
     say [Think about ways you could use less water!] for (5) secs

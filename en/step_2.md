@@ -13,7 +13,7 @@ On this card you'll make the water usage calculator. To personalise the calculat
 ```blocks3
     when green flag clicked
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [What's your name?] and wait
 ```
 
@@ -25,7 +25,7 @@ You've asked the user for information — now you need to get the answer!
 
 [[[generic-scratch3-add-variable]]]
 
-+ Drag out the `set flushes to`{:class="block3variables"} block from **Data**.
++ Drag out the `set flushes to`{:class="block3variables"} block from **Variables**.
 
 + Then, look in the **Sensing** section and find the `answer`{:class="block3sensing"} block. This is a special variable where a Scratch program puts the most recent answer it's received from an `ask and wait`{:class="block3sensing"} block.
 
@@ -34,7 +34,7 @@ You've asked the user for information — now you need to get the answer!
 ```blocks3
     when green flag clicked
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
 ```
@@ -68,7 +68,7 @@ It lets you **multiply** two numbers.
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -80,7 +80,7 @@ It lets you **multiply** two numbers.
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -137,7 +137,7 @@ Your code should look something like this now:
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
@@ -164,7 +164,7 @@ Here's how your code would look:
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
-    switch costume to [monkey2-a v]
+    switch costume to [monkey-a v]
     ask [How many times do you flush the toilet each week?] and wait
     set [flushes v] to (answer)
     change [totalWater v] by ((flushes) * (6))
