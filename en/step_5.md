@@ -10,21 +10,21 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
 
 + Once you're done adding things to the list, you can hide it from the stage.
 
-+ Now look at your script with the loops and find the two `go to`{:class="blockmotion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
++ Now look at your script with the loops and find the two `go to`{:class="block3motion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
 
-```blocks
+```blocks3
     go to [Tap v]
 ```
 
-+ Just like you did before, drag an `item`{:class="blockdata"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
++ Just like you did before, drag an `item`{:class="block3variables"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
 
-```blocks
+```blocks3
     go to (item (1 v) of [Sprites v])
 ```
 
 + Your code should look like this now:
 
-```blocks
+```blocks3
     go to (item (1 v) of [Sprites v])
     move (45) steps
     repeat (item (1 v) of [WaterAmounts v])
@@ -43,30 +43,30 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
 
 Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
 
-+ Create a new variable called `counter`{:class="blockdata"}.
++ Create a new variable called `counter`{:class="block3variables"}.
 
-+ At the start of the program, set the value of `counter`{:class="blockdata"} to `0`:
++ At the start of the program, set the value of `counter`{:class="block3variables"} to `0`:
 
-```blocks
+```blocks3
     when green flag clicked
     set [counter v] to [0]
 ```
 
-+ Drag the `counter`{:class="blockdata"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
++ Drag the `counter`{:class="block3variables"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
 
-```blocks
+```blocks3
     go to (item (counter) of [Sprites v])
 ```
 
-```blocks
+```blocks3
     repeat (item (counter) of [WaterAmounts v])
 ```
 
-One thing is still missing: the value of `counter`{:class="blockdata"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
+One thing is still missing: the value of `counter`{:class="block3variables"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
 
-+ Add in two `change counter by 1`{:class="blockdata"} blocks into your code so that it looks like this:
++ Add in two `change counter by 1`{:class="block3variables"} blocks into your code so that it looks like this:
 
-```blocks
+```blocks3
     change [counter v] by (1)
     go to (item (counter) of [Sprites v])
     move (45) steps
@@ -87,7 +87,7 @@ One thing is still missing: the value of `counter`{:class="blockdata"} is `0` at
 
 + Run your code to check that everything is still working as it should! Here is what the full program should look like by now:
 
-```blocks
+```blocks3
     when green flag clicked
     set [counter v] to [0]
     clear

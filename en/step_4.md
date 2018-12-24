@@ -1,6 +1,6 @@
 ## Using a list
 
-Instead of typing the amounts of water directly into the `repeat until`{:class="blockcontrol"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
+Instead of typing the amounts of water directly into the `repeat until`{:class="block3control"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
 
 + Go to the **Data** section of blocks and click **Make a List**.
 
@@ -35,15 +35,15 @@ Now you will use the values from your list to tell the loop how many times to re
 
 + Look for this block in the blocks for you list in **Data**:
 
-```blocks
+```blocks3
     item (1 v) of [WaterAmounts v]
 ```
 
-+ Find your `repeat`{:class="blockcontrol"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
++ Find your `repeat`{:class="block3control"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
 
-+ Do the same for the second `repeat`{:class="blockcontrol"} loop, the one for `Toilet`.
++ Do the same for the second `repeat`{:class="block3control"} loop, the one for `Toilet`.
 
-+ In the block you put into the second `repeat`{:class="blockcontrol"} loop, click on the `1` and change it by typing in the number `2`.
++ In the block you put into the second `repeat`{:class="block3control"} loop, click on the `1` and change it by typing in the number `2`.
 
 --- collapse ---
 ---
@@ -52,7 +52,7 @@ title: How does it work?
 
 The block
 
-```blocks
+```blocks3
     item (1 v) of [WaterAmounts v]
 ```
 
@@ -66,7 +66,7 @@ This number is called the **index**.
 
 + Check that your loops look like this, and then run your code to test it.
 
-```blocks
+```blocks3
     go to [Tap v]
     move (45) steps
     repeat (item (1 v) of [WaterAmounts v])
@@ -83,6 +83,6 @@ This number is called the **index**.
     end
 ```
 
-You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="blockcontrol"} block.
+You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="block3control"} block.
 
 So you've managed to replace one set of numbers with a list. How about doing the same with the sprites that match up with those numbers? You'll do this on the next card!

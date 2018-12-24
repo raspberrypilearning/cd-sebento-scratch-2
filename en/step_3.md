@@ -6,7 +6,7 @@ Let's draw a chart to help the user understand the quantities of water more easi
 
 ![The grey rectangular button costume](images/drawBlankButton.png)
 
-[[[generic-scratch-rename-sprite]]]
+[[[generic-scratch3-rename-sprite]]]
 
 + You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be labelled with "Tap running for 1 minute" and the `Toilet` with "Flushing the toilet". To add text to your costume you can click on the **T** icon:
 
@@ -22,7 +22,7 @@ Let's draw a chart to help the user understand the quantities of water more easi
 
 + Then add the following blocks to the end of your code:
 
-```blocks
+```blocks3
     say [How about brushing your teeth?] for (2) secs
     say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
     say [...a running tap loses 6 litres of water per minute?] for (3) secs
@@ -45,7 +45,7 @@ If, like me, you don't want to go through the **whole** program every time you w
 
 + Then attach your new code directly onto the green flag.
 
-```blocks
+```blocks3
     when green flag clicked
     say [How about brushing your teeth?] for (2) secs
     say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
@@ -57,7 +57,7 @@ If, like me, you don't want to go through the **whole** program every time you w
 + When you're ready, you can put everything back together again.
 
 
-```blocks
+```blocks3
     when green flag clicked
     set [totalWater v] to [0]
     set size to (80) %
@@ -83,9 +83,9 @@ If, like me, you don't want to go through the **whole** program every time you w
 
 --- /collapse ---
 
-+ Add the following blocks to the end of your script. You'll find the `stamp`{:class="blockpen"} block in the **Pen** category.
++ Add the following blocks to the end of your script. You'll find the `stamp`{:class="block3extensions"} block in the **Pen** category.
 
-```blocks
+```blocks3
     go to [Tap v]
     move (45) steps
     repeat (6)
@@ -97,24 +97,24 @@ If, like me, you don't want to go through the **whole** program every time you w
 
 + Click the green flag to watch your new animation!
 
-+ You might need to change the `move 45 steps`{:class="blockmotion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
++ You might need to change the `move 45 steps`{:class="block3motion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
 
 --- collapse ---
 ---
 title: How does it work?
 ---
 
-The `stamp`{:class="blockpen"} block makes a sprite stamp an image of itself onto the stage.
+The `stamp`{:class="block3extensions"} block makes a sprite stamp an image of itself onto the stage.
 
 It draws the image straight onto the background, so no new sprites are created.
 
-You can double-click the `clear`{:class="blockpen"} block to remove everything that was added with **Pen** blocks.
+You can double-click the `clear`{:class="block3extensions"} block to remove everything that was added with **Pen** blocks.
 
 --- /collapse ---
 
-+ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="blockpen"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="blockmotion"} block.
++ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="block3extensions"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="block3motion"} block.
 
-```blocks
+```blocks3
     when green flag clicked
     clear
     go to x:(0) y:(0)
@@ -126,7 +126,7 @@ You can double-click the `clear`{:class="blockpen"} block to remove everything t
 
 --- hint ---
 
-+ Use the `go to mouse-pointer`{:class="blockmotion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
++ Use the `go to mouse-pointer`{:class="block3motion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
 
 + Repeat the stamp code `6` times, which is the number of litres of water used per flush.
 
@@ -136,7 +136,7 @@ You can double-click the `clear`{:class="blockpen"} block to remove everything t
 
 + Here is the code you need to add:
 
-```blocks
+```blocks3
     go to [Toilet v]
     move (45) steps
     repeat (6)

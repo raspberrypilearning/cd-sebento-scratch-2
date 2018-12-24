@@ -2,7 +2,7 @@
 
 Right now you have two sets of code blocks in your script that are identical:
 
-```blocks
+```blocks3
     change [counter v] by (1)
     go to (item (counter) of [Sprites v])
     move (45) steps
@@ -15,25 +15,25 @@ Right now you have two sets of code blocks in your script that are identical:
 
 If you were to add more sprites to illustrate amounts of water for other things like showers or washing dishes, this would very quickly get out of hand! Seems like these blocks should be inside a loop of some sort, right?
 
-+ On your script, detach the first `change counter by 1`{:class="blockdata"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
++ On your script, detach the first `change counter by 1`{:class="block3variables"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
 
-```blocks
+```blocks3
     switch costume to [glass water-a v]
     set size to (35) %
 ```
 
 + Look in the **Control** section and take out this block:
 
-```blocks
+```blocks3
     repeat until <>
     end
 ```
 
-+ Attach it after the `set size to 35%`{:class="blocklooks"} block.
++ Attach it after the `set size to 35%`{:class="block3looks"} block.
 
 + Then take one group of the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
 
-```blocks
+```blocks3
     switch costume to [glass water-a v]
     set size to (35) %
     repeat until <>
@@ -48,30 +48,30 @@ If you were to add more sprites to illustrate amounts of water for other things 
     end
 ```
 
-Finally, you need to put something in the `until`{:class="blockcontrol"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Data**:
+Finally, you need to put something in the `until`{:class="block3control"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Data**:
 
-```blocks
+```blocks3
     length of [Sprites v]
 ```
 
 + The first thing you'll need is an **operator** block to check if two things are equal:
 
-```blocks
+```blocks3
     [] = []
 ```
 
-+ Place this into the space in the `repeat until`{:class="blockcontrol"} block:
++ Place this into the space in the `repeat until`{:class="block3control"} block:
 
-```blocks
+```blocks3
     repeat until <[] = []]>
     end
 ```
 
-+ Grab the `counter`{:class="blockdata"} block and plug it into the left-hand side of the operator block.
++ Grab the `counter`{:class="block3variables"} block and plug it into the left-hand side of the operator block.
 
-+ Then, from **Data**, place the `length of`{:class="blockdata"} block into the right-hand side of the operator.
++ Then, from **Data**, place the `length of`{:class="block3variables"} block into the right-hand side of the operator.
 
-```blocks
+```blocks3
     repeat until <(counter) = (length of [Sprites v])>
     end
 ```
@@ -81,11 +81,11 @@ Finally, you need to put something in the `until`{:class="blockcontrol"}! You wa
 title: About the new loop
 ---
 
-You've used the `repeat`{:class="blockcontrol"} with a number to tell Scratch how many times to repeat something. 
+You've used the `repeat`{:class="block3control"} with a number to tell Scratch how many times to repeat something. 
 
-But if you add more things to your lists of sprites and water amounts, you'll have to change the code each time to update the the `repeat`{:class="blockcontrol"} number. 
+But if you add more things to your lists of sprites and water amounts, you'll have to change the code each time to update the the `repeat`{:class="block3control"} number. 
 
-With a `repeat until`{:class="blockcontrol"} block, the code checks how many times it needs to repeat so that you don't have to!
+With a `repeat until`{:class="block3control"} block, the code checks how many times it needs to repeat so that you don't have to!
 
 --- /collapse ---
 
@@ -109,9 +109,9 @@ Here are the descriptions I've used:
 
 + Tick the checkboxes to show both your lists on the stage so you can add the new information to them.
 
-+ Add all the new sprite names to the `Sprites`{:class="blockdata"} list, making sure to type them exactly correct.
++ Add all the new sprite names to the `Sprites`{:class="block3variables"} list, making sure to type them exactly correct.
 
-+ Then add the water usage to the `WaterAmounts`{:class="blockdata"} list. The table below shows the litres of water for each thing. Make sure you add them in the same order as the sprites, so that their list index numbers match up!
++ Then add the water usage to the `WaterAmounts`{:class="block3variables"} list. The table below shows the litres of water for each thing. Make sure you add them in the same order as the sprites, so that their list index numbers match up!
 
 | Sprite | WaterAmount | 
 |-----|-------|
