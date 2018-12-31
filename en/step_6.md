@@ -2,79 +2,41 @@
 
 Right now you have two sets of code blocks in your script that are identical:
 
-```blocks3
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
+![blocks_1546300076_908322](images/blocks_1546300076_908322.png)
 
 If you were to add more sprites to illustrate amounts of water for other things like showers or washing dishes, this would very quickly get out of hand! Seems like these blocks should be inside a loop of some sort, right?
 
 + On your script, detach the first `change counter by 1`{:class="block3variables"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
 
-```blocks3
-    switch costume to [glass water-a v]
-    set size to (35) %
-```
+![blocks_1546300078_032676](images/blocks_1546300078_032676.png)
 
 + Look in the **Control** section and take out this block:
 
-```blocks3
-    repeat until <>
-    end
-```
+![blocks_1546300079_1017091](images/blocks_1546300079_1017091.png)
 
 + Attach it after the `set size to 35%`{:class="block3looks"} block.
 
 + Then take one group of the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
 
-```blocks3
-    switch costume to [glass water-a v]
-    set size to (35) %
-    repeat until <>
-        change [counter v] by (1)
-        go to (item (counter) of [Sprites v])
-        move (45) steps
-        repeat (item (counter) of [WaterAmounts v])
-            move (20) steps
-            stamp
-            wait (0.5) secs
-        end
-    end
-```
+![blocks_1546300080_170808](images/blocks_1546300080_170808.png)
 
 Finally, you need to put something in the `until`{:class="block3control"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Variables**:
 
-```blocks3
-    length of [Sprites v]
-```
+![blocks_1546300081_31763](images/blocks_1546300081_31763.png)
 
 + The first thing you'll need is an **operator** block to check if two things are equal:
 
-```blocks3
-    [] = []
-```
+![blocks_1546300082_390549](images/blocks_1546300082_390549.png)
 
 + Place this into the space in the `repeat until`{:class="block3control"} block:
 
-```blocks3
-    repeat until <[] = []]>
-    end
-```
+![blocks_1546300083_458082](images/blocks_1546300083_458082.png)
 
 + Grab the `counter`{:class="block3variables"} block and plug it into the left-hand side of the operator block.
 
 + Then, from **Variables**, place the `length of`{:class="block3variables"} block into the right-hand side of the operator.
 
-```blocks3
-    repeat until <(counter) = (length of [Sprites v])>
-    end
-```
+![blocks_1546300084_5299242](images/blocks_1546300084_5299242.png)
 
 --- collapse ---
 ---

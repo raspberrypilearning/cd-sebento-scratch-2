@@ -10,34 +10,15 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
 
 + Now look at your script with the loops and find the two `go to`{:class="block3motion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
 
-```blocks3
-    go to [Tap v]
-```
+![blocks_1546300067_610705](images/blocks_1546300067_610705.png)
 
 + Just like you did before, drag an `item`{:class="block3variables"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
 
-```blocks3
-    go to (item (1 v) of [Sprites v])
-```
+![blocks_1546300068_670539](images/blocks_1546300068_670539.png)
 
 + Your code should look like this now:
 
-```blocks3
-    go to (item (1 v) of [Sprites v])
-    move (45) steps
-    repeat (item (1 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    go to (item (2 v) of [Sprites v])
-    move (45) steps
-    repeat (item (2 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
+![blocks_1546300069_7392142](images/blocks_1546300069_7392142.png)
 
 Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
 
@@ -45,85 +26,22 @@ Do you see that you are now using the same **index** to select the sprite name f
 
 + At the start of the program, set the value of `counter`{:class="block3variables"} to `0`:
 
-```blocks3
-    when green flag clicked
-    set [counter v] to [0]
-```
+![blocks_1546300070_887551](images/blocks_1546300070_887551.png)
 
 + Drag the `counter`{:class="block3variables"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
 
-```blocks3
-    go to (item (counter) of [Sprites v])
-```
+![blocks_1546300071_969146](images/blocks_1546300071_969146.png)
 
-```blocks3
-    repeat (item (counter) of [WaterAmounts v])
-```
+![blocks_1546300073_03716](images/blocks_1546300073_03716.png)
 
 One thing is still missing: the value of `counter`{:class="block3variables"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
 
 + Add in two `change counter by 1`{:class="block3variables"} blocks into your code so that it looks like this:
 
-```blocks3
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
+![blocks_1546300074_115638](images/blocks_1546300074_115638.png)
 
 + Run your code to check that everything is still working as it should! Here is what the full program should look like by now:
 
-```blocks3
-    when green flag clicked
-    set [counter v] to [0]
-    clear
-    go to x:(0) y:(0)
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many minutes do you usually spend in the shower?] and wait
-    set [showerMinutes v] to (answer)
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
-    switch costume to [glass water-a v]
-    set size to (35) %
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
+![blocks_1546300075_294851](images/blocks_1546300075_294851.png)
 
 On the next card you will learn how to make your code even shorter with another clever loop!

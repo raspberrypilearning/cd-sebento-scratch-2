@@ -35,9 +35,7 @@ Now you will use the values from your list to tell the loop how many times to re
 
 + Look for this block in the blocks for you list in **Variables**:
 
-```blocks3
-    item (1 v) of [WaterAmounts v]
-```
+![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
 
 + Find your `repeat`{:class="block3control"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
 
@@ -52,9 +50,7 @@ title: How does it work?
 
 The block
 
-```blocks3
-    item (1 v) of [WaterAmounts v]
-```
+![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
 
 lets you select a thing from your list. 
 
@@ -66,22 +62,7 @@ This number is called the **index**.
 
 + Check that your loops look like this, and then run your code to test it.
 
-```blocks3
-    go to [Tap v]
-    move (45) steps
-    repeat (item (1 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    go to [Toilet v]
-    move (45) steps
-    repeat (item (2 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
+![blocks_1546300066_459073](images/blocks_1546300066_459073.png)
 
 You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="block3control"} block.
 
