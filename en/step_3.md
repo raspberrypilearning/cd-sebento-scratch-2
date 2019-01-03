@@ -1,183 +1,112 @@
-## Getting information from the user
+## Draw a chart
 
-On this card you'll make the water usage calculator. To personalise the calculation for your program's user, you'll use a new block to ask them questions that they can type in answers to.
+Let's draw a chart to help the user understand the quantities of water more easily than if you just told them all the numbers.
 
-+ Open a new Scratch project and go to the Costumes tab for the cat sprite.
++ Make two new sprites called `Tap` and `Toilet`. Select this costume for both:
 
-+ Add a new costume from the library. Choose a character that will do some talking. I'm using this monkey:
+![The grey rectangular button costume](images/drawBlankButton.png)
 
-![The talking monkey costume](images/askMonkeyCostume.png)
+[[[generic-scratch3-rename-sprite]]]
 
-+ Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="blocksensing"} block in the **Sensing** category.
++ You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be labelled with "Tap running for 1 minute" and the `Toilet` with "Flushing the toilet". To add text to your costume you can click on the **T** icon:
 
-```blocks
-    when green flag clicked
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [What's your name?] and wait
-```
+![The T icon for adding text to a picture](images/drawTicon.png)
 
-+ Change the question to `How many times do you flush the toilet each week?`{:class="blocksensing"} .
++ Place the two sprites one above the other on the left hand side of the stage:
 
-You've asked the user for information — now you need to get the answer! 
+![The two button sprites placed at the left edge](images/drawSpritesOnLeft.png)
 
-+ First, create a variable called `flushes`{:class="blockdata"}. You will use it to store the user's answer.
++ Add another costume to your cat sprite, choosing the glass of water from the library.
 
-[[[generic-scratch-add-variable]]]
+![The glass of water costume](images/drawGlassCostume.png)
 
-+ Drag out the `set flushes to`{:class="blockdata"} block from **Data**.
++ Then add the following blocks to the end of your code:
 
-+ Then, look in the **Sensing** section and find the `answer`{:class="blocksensing"} block. This is a special variable where a Scratch program puts the most recent answer it's received from an `ask and wait`{:class="blocksensing"} block.
+![blocks_1546300058_504195](images/blocks_1546300058_504195.png)
 
-+ Plug the block into your code like this:
++ Click the green flag to test your program.
 
-```blocks
-    when green flag clicked
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-```
+--- collapse ---
+---
+title: Do I have to wait for the old code to run all the time?
+---
 
-Time for a bit of math! First you need somewhere to store a total.
+If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move the parts you don't need out of the way for the moment!
 
-+ Create another variable called `totalWater`{:class="blockdata"} and set its value to `0` at the start of the program.
++ Detach all the code from the previous card from the green flag block and drag it off to one side — but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
 
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-```
+![The code moved to one side away from the green flag](images/drawMoveCodeAside.png)
 
-+ Go to **Operators** and look for this block:
++ Then attach your new code directly onto the green flag.
 
-```blocks
-    () * ()
-```
+![blocks_1546300059_673831](images/blocks_1546300059_673831.png)
 
-It lets you **multiply** two numbers.
++ When you're ready, you can put everything back together again.
 
-+ Drag it into a `change totalWater by`{:class="blockdata"} block, like this:
 
-```blocks
-    change [totalWater v] by (() * ())
-```
+![blocks_1546300060_822259](images/blocks_1546300060_822259.png)
 
-+ Plug your `flushes`{:class="blockdata"} block into one side of the operator block and on the other side, type in the number `6`. 6 litres is roughly how much water is used for one toilet flush.
+**Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
 
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-```
+--- /collapse ---
 
-+ Finish off the script with a couple of `say`{:class="blocklooks"} blocks to tell the user the result! You'll find the `join`{:class="blockoperators"} block in **Operators**.
++ Add the following blocks to the end of your script. You'll find the `stamp`{:class="block3extensions"} block in the **Pen** category.
 
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water each week!]) for (5) secs
-```
+To use the Pen blocks in Scratch, you need add the **Pen extension**.
 
-+ Click the green flag to test your code.
++ Click on the **Add extension** button in the bottom left-hand corner.
 
---- challenge ---
+![add extension button highlighted](images/add-extension-annotated.png)
 
-## Challenge: add more water uses to the calculation
++ Click on the **Pen** extension to add it.
 
-+ Add another question to find out how many showers the person has per week. Then calculate how many litres of water this uses and add it to the total. 
+![pen extension highlighted](images/click-pen-annotated.png)
 
-A shower uses about 7 litres per minute, so a five-minute shower uses around 35 litres.
++ The Pen section then appears at the bottom of the blocks menu.
+
+![pen extension blocks](images/pen-extension-blocks.png)
+
+![blocks_1546300062_147222](images/blocks_1546300062_147222.png)
+
++ Click the green flag to watch your new animation!
+
++ You might need to change the `move 45 steps`{:class="block3motion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
+
+--- collapse ---
+---
+title: How does it work?
+---
+
+The `stamp`{:class="block3extensions"} block makes a sprite stamp an image of itself onto the stage.
+
+It draws the image straight onto the background, so no new sprites are created.
+
+You can double-click the `clear`{:class="block3extensions"} block to remove everything that was added with **Pen** blocks.
+
+--- /collapse ---
+
++ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="block3extensions"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="block3motion"} block.
+
+![blocks_1546300063_227374](images/blocks_1546300063_227374.png)
+
++ Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
 
 --- hints ---
 
 --- hint ---
 
-+ You'll need to create a variable to store the number of showers per week. 
++ Use the `go to mouse-pointer`{:class="block3motion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
 
-+ Use the `ask and wait`{:class="blocksensing"} and `answer`{:class="blocksensing"} blocks to get the information from the user and store it in the new variable.
-
-```blocks
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-```
++ Repeat the stamp code `6` times, which is the number of litres of water used per flush.
 
 --- /hint ---
 
 --- hint ---
 
-+ To calculate the amount of water used on showering, you'll need to multiply the number of showers by `35` (the amount of water for one five-minute shower).
++ Here is the code you need to add:
 
-```blocks
-    (showers) * (35)
-```
+![blocks_1546300064_3044748](images/blocks_1546300064_3044748.png)
 
-+ You can add the result to your total like this:
-
-```blocks
-    change [totalWater v] by ((showers) * (35))
-```
-
---- /hint ---
-
---- hint ---
-
-Your code should look something like this now:
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * (35))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-```
-
---- /hint ---
-
---- hint ---
-
-If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by `7` (litres per minute in the shower), and then multiply the result by the number of showers. You can put an operator inside an operator to do that, like this:
-
-```blocks
-    (showers) * ((showerMinutes) * (7))
-```
-
-Here's how your code would look:
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many minutes do you usually spend in the shower?] and wait
-    set [showerMinutes v] to (answer)
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-```
 --- /hint ---
 
 --- /hints ---
-
---- /challenge ---

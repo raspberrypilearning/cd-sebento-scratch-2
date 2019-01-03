@@ -1,151 +1,69 @@
-## Draw a chart
+## Using a list
 
-Let's draw a chart to help the user understand the quantities of water more easily than if you just told them all the numbers.
+Instead of typing the amounts of water directly into the `repeat until`{:class="block3control"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
 
-+ Make two new sprites called `Tap` and `Toilet`. Select this costume for both (it's in **Things**):
++ Go to the **Variables** section of blocks and click **Make a List**.
 
-![The grey rectangular button costume](images/drawBlankButton.png)
++ Enter `WaterAmounts` as the name and click **OK**.
 
-[[[generic-scratch-rename-sprite]]]
+Your list will appear on the stage.
 
-+ You'll need to draw on the costumes to add descriptive text to them. The `Tap` will be labelled with "Tap running for 1 minute" and the `Toilet` with "Flushing the toilet". To add text to your costume you can click on the **T** icon:
+![the empty WaterAmounts list displayed](images/listNewList.png)
 
-![The T icon for adding text to a picture](images/drawTicon.png)
++ Click the `+` at the bottom of the list and type in the number `6`. This is the number of litres for your first illustration, the running tap.
 
-+ Place the two sprites one above the other on the left hand side of the stage:
-
-![The two button sprites placed at the left edge](images/drawSpritesOnLeft.png)
-
-+ Add another costume to your cat sprite, choosing the glass of water from the library.
-
-![The glass of water costume](images/drawGlassCostume.png)
-
-+ Then add the following blocks to the end of your code:
-
-```blocks
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
-    switch costume to [glass water-a v]
-    set size to (35) %
-```
-
-+ Click the green flag to test your program.
+![Adding an item to the list](images/listAddItems.png)
 
 --- collapse ---
 ---
-title: Do I have to wait for the old code to run all the time?
+title: Removing an item
 ---
 
-If, like me, you don't want to go through the **whole** program every time you want to test a new bit of code, then you can move the parts you don't need out of the way for the moment!
++ If you want to remove items from the list, you can click on the item you want to delete, then click the little `x` that appears next to it.
 
-+ Detach all the code from the previous card from the green flag block and drag it off to one side — but don't get rid of it entirely! Just leave it in a space on the current sprite panel.
-
-![The code moved to one side away from the green flag](images/drawMoveCodeAside.png)
-
-+ Then attach your new code directly onto the green flag.
-
-```blocks
-    when green flag clicked
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
-    switch costume to [glass water-a v]
-    set size to (35) %
-```
-
-+ When you're ready, you can put everything back together again.
-
-
-```blocks
-    when green flag clicked
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey2-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many minutes do you usually spend in the shower?] and wait
-    set [showerMinutes v] to (answer)
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
-    switch costume to [glass water-a v]
-    set size to (35) %
-```
-
-**Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
+![Deleting a list item](images/listDeleteItem.png)
 
 --- /collapse ---
 
-+ Add the following blocks to the end of your script. You'll find the `stamp`{:class="blockpen"} block in the **Pen** category.
++ Add another item for your second illustration for flushing the toilet. The value for this one is `6` as well.
 
-```blocks
-    go to [Tap v]
-    move (45) steps
-    repeat (6)
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
++ You can untick the checkbox next to your list in the **Variables** section to hide it from the stage.
 
-+ Click the green flag to watch your new animation!
+![The checkbox to show or hide a list](images/listUntickShow.png)
 
-+ You might need to change the `move 45 steps`{:class="blockmotion"} to another number depending on the size of your `Tap` sprite. The purpose of this block is to place the glass **beside** the text so you can see it.
+Now you will use the values from your list to tell the loop how many times to repeat.
+
++ Look for this block in the blocks for you list in **Variables**:
+
+![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
+
++ Find your `repeat`{:class="block3control"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
+
++ Do the same for the second `repeat`{:class="block3control"} loop, the one for `Toilet`.
+
++ In the block you put into the second `repeat`{:class="block3control"} loop, click on the `1` and change it by typing in the number `2`.
 
 --- collapse ---
 ---
 title: How does it work?
 ---
 
-The `stamp`{:class="blockpen"} block makes a sprite stamp an image of itself onto the stage.
+The block
 
-It draws the image straight onto the background, so no new sprites are created.
+![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
 
-You can double-click the `clear`{:class="blockpen"} block to remove everything that was added with **Pen** blocks.
+lets you select a thing from your list. 
+
+The number chooses which thing to select. It represents a place in the list. So item `1` is the first thing on the list, item `2` is the second, and so on.
+
+This number is called the **index**.
 
 --- /collapse ---
 
-+ Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="blockpen"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="blockmotion"} block.
++ Check that your loops look like this, and then run your code to test it.
 
-```blocks
-    when green flag clicked
-    clear
-    go to x:(0) y:(0)
-```
+![blocks_1546300066_459073](images/blocks_1546300066_459073.png)
 
-+ Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
+You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="block3control"} block.
 
---- hints ---
-
---- hint ---
-
-+ Use the `go to mouse-pointer`{:class="blockmotion"} block to move the sprite to the correct sprite, and select the sprite by clicking on the little triangle in the block.
-
-+ Repeat the stamp code `6` times, which is the number of litres of water used per flush.
-
---- /hint ---
-
---- hint ---
-
-+ Here is the code you need to add:
-
-```blocks
-    go to [Toilet v]
-    move (45) steps
-    repeat (6)
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
-
---- /hint ---
-
---- /hints ---
+So you've managed to replace one set of numbers with a list. How about doing the same with the sprites that match up with those numbers? You'll do this on the next card!

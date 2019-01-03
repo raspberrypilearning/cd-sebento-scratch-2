@@ -1,88 +1,47 @@
-## Using a list
+## Matching things up
 
-Instead of typing the amounts of water directly into the `repeat until`{:class="blockcontrol"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
+Now that you've got the water amounts in a list, you're going to put the sprite names in another list. Since the sprite names and the water amounts are related to each other, you'll be using the same counter variable to keep track of which list item you're on in both lists.
 
-+ Go to the **Data** section of blocks and click **Make a List**.
++ Make another list and call it `Sprites`.
 
-+ Enter `WaterAmounts` as the name and click **OK**.
++ Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the `Tap` and `Toilet` sprites!
 
-Your list will appear on the stage.
++ Once you're done adding things to the list, you can hide it from the stage.
 
-![the empty WaterAmounts list displayed](images/listNewList.png)
++ Now look at your script with the loops and find the two `go to`{:class="block3motion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
 
-+ Click the `+` at the bottom of the list and type in the number `6`. This is the number of litres for your first illustration, the running tap.
+![blocks_1546300067_610705](images/blocks_1546300067_610705.png)
 
-![Adding an item to the list](images/listAddItems.png)
++ Just like you did before, drag an `item`{:class="block3variables"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
 
---- collapse ---
----
-title: Removing an item
----
+![blocks_1546300068_670539](images/blocks_1546300068_670539.png)
 
-+ If you want to remove items from the list, you can click on the item you want to delete, then click the little `x` that appears next to it.
++ Your code should look like this now:
 
-![Deleting a list item](images/listDeleteItem.png)
+![blocks_1546300069_7392142](images/blocks_1546300069_7392142.png)
 
---- /collapse ---
+Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
 
-+ Add another item for your second illustration for flushing the toilet. The value for this one is `6` as well.
++ Create a new variable called `counter`{:class="block3variables"}.
 
-+ You can untick the checkbox next to your list in the **Data** section to hide it from the stage.
++ At the start of the program, set the value of `counter`{:class="block3variables"} to `0`:
 
-![The checkbox to show or hide a list](images/listUntickShow.png)
+![blocks_1546300070_887551](images/blocks_1546300070_887551.png)
 
-Now you will use the values from your list to tell the loop how many times to repeat.
++ Drag the `counter`{:class="block3variables"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
 
-+ Look for this block in the blocks for you list in **Data**:
+![blocks_1546300071_969146](images/blocks_1546300071_969146.png)
 
-```blocks
-    item (1 v) of [WaterAmounts v]
-```
+![blocks_1546300073_03716](images/blocks_1546300073_03716.png)
 
-+ Find your `repeat`{:class="blockcontrol"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
+One thing is still missing: the value of `counter`{:class="block3variables"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
 
-+ Do the same for the second `repeat`{:class="blockcontrol"} loop, the one for `Toilet`.
++ Add in two `change counter by 1`{:class="block3variables"} blocks into your code so that it looks like this:
 
-+ In the block you put into the second `repeat`{:class="blockcontrol"} loop, click on the `1` and change it by typing in the number `2`.
+![blocks_1546300074_115638](images/blocks_1546300074_115638.png)
 
---- collapse ---
----
-title: How does it work?
----
++ Run your code to check that everything is still working as it should! Here is what the full program should look like by now:
 
-The block
+![blocks_1546300075_294851](images/blocks_1546300075_294851.png)
 
-```blocks
-    item (1 v) of [WaterAmounts v]
-```
-
-lets you select a thing from your list. 
-
-The number chooses which thing to select. It represents a place in the list. So item `1` is the first thing on the list, item `2` is the second, and so on.
-
-This number is called the **index**.
-
---- /collapse ---
-
-+ Check that your loops look like this, and then run your code to test it.
-
-```blocks
-    go to [Tap v]
-    move (45) steps
-    repeat (item (1 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    go to [Toilet v]
-    move (45) steps
-    repeat (item (2 v) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
-
-You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="blockcontrol"} block.
-
-So you've managed to replace one set of numbers with a list. How about doing the same with the sprites that match up with those numbers? You'll do this on the next card!
+On the next card you will learn how to make your code even shorter with another clever loop!
