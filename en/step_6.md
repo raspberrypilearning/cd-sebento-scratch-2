@@ -2,41 +2,41 @@
 
 Right now you have two sets of code blocks in your script that are identical:
 
-![blocks_1546300076_908322](images/blocks_1546300076_908322.png)
+![blocks_1546557389_727482](images/blocks_1546557389_727482.png)
 
 If you were to add more sprites to illustrate amounts of water for other things like showers or washing dishes, this would very quickly get out of hand! Seems like these blocks should be inside a loop of some sort, right?
 
 + On your script, detach the first `change counter by 1`{:class="block3variables"} block and everything after it, and drag it to one side (don't delete it just yet!), so that the last blocks in your green flag script are:
 
-![blocks_1546300078_032676](images/blocks_1546300078_032676.png)
+![blocks_1546557390_855378](images/blocks_1546557390_855378.png)
 
 + Look in the **Control** section and take out this block:
 
-![blocks_1546300079_1017091](images/blocks_1546300079_1017091.png)
+![blocks_1546557391_93555](images/blocks_1546557391_93555.png)
 
 + Attach it after the `set size to 35%`{:class="block3looks"} block.
 
 + Then take one group of the other blocks and put it inside the loop. You can now delete the other identical set of those blocks, as you no longer need them!
 
-![blocks_1546300080_170808](images/blocks_1546300080_170808.png)
+![blocks_1546557393_017428](images/blocks_1546557393_017428.png)
 
 Finally, you need to put something in the `until`{:class="block3control"}! You want the code to repeat for each item in the lists, so a good thing to check for would be whether the counter has reached the last item in one of them. You can use another handy block here, from the list blocks in **Variables**:
 
-![blocks_1546300081_31763](images/blocks_1546300081_31763.png)
+![blocks_1546557394_172637](images/blocks_1546557394_172637.png)
 
 + The first thing you'll need is an **operator** block to check if two things are equal:
 
-![blocks_1546300082_390549](images/blocks_1546300082_390549.png)
+![blocks_1546557395_2310588](images/blocks_1546557395_2310588.png)
 
 + Place this into the space in the `repeat until`{:class="block3control"} block:
 
-![blocks_1546300083_458082](images/blocks_1546300083_458082.png)
+![blocks_1546557396_285944](images/blocks_1546557396_285944.png)
 
 + Grab the `counter`{:class="block3variables"} block and plug it into the left-hand side of the operator block.
 
 + Then, from **Variables**, place the `length of`{:class="block3variables"} block into the right-hand side of the operator.
 
-![blocks_1546300084_5299242](images/blocks_1546300084_5299242.png)
+![blocks_1546557397_354474](images/blocks_1546557397_354474.png)
 
 --- collapse ---
 ---

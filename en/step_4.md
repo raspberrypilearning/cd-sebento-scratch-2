@@ -35,7 +35,7 @@ Now you will use the values from your list to tell the loop how many times to re
 
 + Look for this block in the blocks for you list in **Variables**:
 
-![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
+![blocks_1546557378_205835](images/blocks_1546557378_205835.png)
 
 + Find your `repeat`{:class="block3control"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
 
@@ -50,7 +50,7 @@ title: How does it work?
 
 The block
 
-![blocks_1546300065_38348](images/blocks_1546300065_38348.png)
+![blocks_1546557378_205835](images/blocks_1546557378_205835.png)
 
 lets you select a thing from your list. 
 
@@ -62,7 +62,7 @@ This number is called the **index**.
 
 + Check that your loops look like this, and then run your code to test it.
 
-![blocks_1546300066_459073](images/blocks_1546300066_459073.png)
+![blocks_1546557379_270004](images/blocks_1546557379_270004.png)
 
 You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="block3control"} block.
 
