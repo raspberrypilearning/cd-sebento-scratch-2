@@ -22,7 +22,7 @@ Let's draw a chart to help the user understand the quantities of water more easi
 
 + Then add the following blocks to the end of your code:
 
-![blocks_1546300058_504195](images/blocks_1546300058_504195.png)
+![blocks_1546557371_301109](images/blocks_1546557371_301109.png)
 
 + Click the green flag to test your program.
 
@@ -39,12 +39,12 @@ If, like me, you don't want to go through the **whole** program every time you w
 
 + Then attach your new code directly onto the green flag.
 
-![blocks_1546300059_673831](images/blocks_1546300059_673831.png)
+![blocks_1546557372_47151](images/blocks_1546557372_47151.png)
 
 + When you're ready, you can put everything back together again.
 
 
-![blocks_1546300060_822259](images/blocks_1546300060_822259.png)
+![blocks_1546557373_613912](images/blocks_1546557373_613912.png)
 
 **Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
 
@@ -66,7 +66,7 @@ To use the Pen blocks in Scratch, you need add the **Pen extension**.
 
 ![pen extension blocks](images/pen-extension-blocks.png)
 
-![blocks_1546300062_147222](images/blocks_1546300062_147222.png)
+![blocks_1546557374_947648](images/blocks_1546557374_947648.png)
 
 + Click the green flag to watch your new animation!
 
@@ -87,7 +87,7 @@ You can double-click the `clear`{:class="block3extensions"} block to remove ever
 
 + Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="block3extensions"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="block3motion"} block.
 
-![blocks_1546300063_227374](images/blocks_1546300063_227374.png)
+![blocks_1546557376_042138](images/blocks_1546557376_042138.png)
 
 + Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
 
@@ -105,7 +105,7 @@ You can double-click the `clear`{:class="block3extensions"} block to remove ever
 
 + Here is the code you need to add:
 
-![blocks_1546300064_3044748](images/blocks_1546300064_3044748.png)
+![blocks_1546557377_116862](images/blocks_1546557377_116862.png)
 
 --- /hint ---
 

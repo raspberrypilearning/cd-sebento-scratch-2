@@ -10,11 +10,11 @@ On this card you'll make a few small changes to control things like the speed of
 
 + Finally, why not add a `say`{:class="block3looks"} block to have the sprite display the number of litres of water being shown? 
 
-![blocks_1546300085_609514](images/blocks_1546300085_609514.png)
+![blocks_1546557398_440458](images/blocks_1546557398_440458.png)
 
 + I'm also adding in some code at the very end to change the sprite back to the monkey and get the user to think about ways to conserve water.
 
-![blocks_1546300086_6863859](images/blocks_1546300086_6863859.png)
+![blocks_1546557399_5199108](images/blocks_1546557399_5199108.png)
 
 --- collapse ---
 ---
@@ -23,7 +23,7 @@ title: Show me all the code!
 
 Here is how the whole program looks now, do you can check it if something in yours is not working right:
 
-![blocks_1546300087_912972](images/blocks_1546300087_912972.png)
+![blocks_1546557400_764662](images/blocks_1546557400_764662.png)
 
 --- /collapse ---
 

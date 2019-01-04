@@ -10,9 +10,9 @@ On this card you'll make the water usage calculator. To personalise the calculat
 
 + Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="block3sensing"} block in the **Sensing** category.
 
-![blocks_1546300042_683986](images/blocks_1546300042_683986.png)
+![blocks_1546557354_089385](images/blocks_1546557354_089385.png)
 
-+ Change the question to `How many times do you flush the toilet each week?`{:class="block3sensing"} .
++ Change the question to `How many times do you flush the toilet each week?`.
 
 You've asked the user for information — now you need to get the answer! 
 
@@ -26,31 +26,31 @@ You've asked the user for information — now you need to get the answer!
 
 + Plug the block into your code like this:
 
-![blocks_1546300045_1721501](images/blocks_1546300045_1721501.png)
+![blocks_1546557357_880265](images/blocks_1546557357_880265.png)
 
 Time for a bit of math! First you need somewhere to store a total.
 
 + Create another variable called `totalWater`{:class="block3variables"} and set its value to `0` at the start of the program.
 
-![blocks_1546300046_278722](images/blocks_1546300046_278722.png)
+![blocks_1546557359_022644](images/blocks_1546557359_022644.png)
 
 + Go to **Operators** and look for this block:
 
-![blocks_1546300047_349299](images/blocks_1546300047_349299.png)
+![blocks_1546557360_099408](images/blocks_1546557360_099408.png)
 
 It lets you **multiply** two numbers.
 
 + Drag it into a `change totalWater by`{:class="block3variables"} block, like this:
 
-![blocks_1546300048_402827](images/blocks_1546300048_402827.png)
+![blocks_1546557361_1554601](images/blocks_1546557361_1554601.png)
 
 + Plug your `flushes`{:class="block3variables"} block into one side of the operator block and on the other side, type in the number `6`. 6 litres is roughly how much water is used for one toilet flush.
 
-![blocks_1546300049_475924](images/blocks_1546300049_475924.png)
+![blocks_1546557362_229057](images/blocks_1546557362_229057.png)
 
 + Finish off the script with a couple of `say`{:class="block3looks"} blocks to tell the user the result! You'll find the `join`{:class="block3operators"} block in **Operators**.
 
-![blocks_1546300050_6189928](images/blocks_1546300050_6189928.png)
+![blocks_1546557363_380522](images/blocks_1546557363_380522.png)
 
 + Click the green flag to test your code.
 
@@ -70,7 +70,7 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 + Use the `ask and wait`{:class="block3sensing"} and `answer`{:class="block3sensing"} blocks to get the information from the user and store it in the new variable.
 
-![blocks_1546300051_802088](images/blocks_1546300051_802088.png)
+![blocks_1546557364_5450208](images/blocks_1546557364_5450208.png)
 
 --- /hint ---
 
@@ -78,11 +78,11 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 + To calculate the amount of water used on showering, you'll need to multiply the number of showers by `35` (the amount of water for one five-minute shower).
 
-![blocks_1546300052_87854](images/blocks_1546300052_87854.png)
+![blocks_1546557365_625803](images/blocks_1546557365_625803.png)
 
 + You can add the result to your total like this:
 
-![blocks_1546300053_940649](images/blocks_1546300053_940649.png)
+![blocks_1546557366_6974761](images/blocks_1546557366_6974761.png)
 
 --- /hint ---
 
@@ -90,7 +90,7 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 Your code should look something like this now:
 
-![blocks_1546300055_025864](images/blocks_1546300055_025864.png)
+![blocks_1546557367_765322](images/blocks_1546557367_765322.png)
 
 --- /hint ---
 
@@ -98,11 +98,11 @@ Your code should look something like this now:
 
 If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by `7` (litres per minute in the shower), and then multiply the result by the number of showers. You can put an operator inside an operator to do that, like this:
 
-![blocks_1546300056_213257](images/blocks_1546300056_213257.png)
+![blocks_1546557368_956173](images/blocks_1546557368_956173.png)
 
 Here's how your code would look:
 
-![blocks_1546300057_283595](images/blocks_1546300057_283595.png)
+![blocks_1546557370_066096](images/blocks_1546557370_066096.png)
 --- /hint ---
 
 --- /hints ---
