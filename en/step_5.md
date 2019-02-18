@@ -1,36 +1,89 @@
-## Matching things up
+## Using a list
 
-Now that you've got the water amounts in a list, you're going to put the sprite names in another list. Since the sprite names and the water amounts are related to each other, you'll be using the same counter variable to keep track of which list item you're on in both lists.
+Instead of typing the amounts of water directly into the `repeat until`{:class="block3control"} loops, it's a good idea to use variables. A **list** variable lets you keep all the numbers together in, you guessed it, a list!
 
-+ Make another list and call it `Sprites`{:class="block3variables"}.
+--- task ---
+Go to the **Variables** section of blocks and click **Make a List**.
 
-+ Add two items to the list: `Tap` and `Toilet`. Make sure that what you type is exactly the same as the names of the `Tap` and `Toilet` sprites!
+Enter `WaterAmounts` as the name and click **OK**.
 
-+ Once you're done adding things to the list, you can hide it from the stage.
+Your list will appear on the stage.
 
-+ Now look at your script with the loops and find the two `go to`{:class="block3motion"} blocks that make the talking sprite move to the `Tap` and the `Toilet` sprites.
+![the empty WaterAmounts list displayed](images/listNewList.png)
+
+Click the `+` at the bottom of the list and type in the number `6`. This is the number of litres for your first illustration, the running tap.
+
+![Adding an item to the list](images/listAddItems.png)
+--- /task ---
+
+--- collapse ---
+---
+title: Removing an item
+---
+
++ If you want to remove items from the list, you can click on the item you want to delete, then click the little `x` that appears next to it.
+
+![Deleting a list item](images/listDeleteItem.png)
+
+--- /collapse ---
+
+--- task ---
+Add another item for your second illustration for flushing the toilet. The value for this one is `6` as well.
+--- /task ---
+
+ You can untick the checkbox next to your list in the **Variables** section to hide it from the stage.
+
+![The checkbox to show or hide a list](images/listUntickShow.png)
+
+Now you will use the values from your list to tell the loop how many times to repeat.
+
+--- task ---
+Look for this block in the blocks for you list in **Variables**:
+
+```blocks3
+    item (1 v) of [WaterAmounts v]
+```
+
+Find your `repeat`{:class="block3control"} loop for the `Tap`, and plug in the above block instead of the number `6` you typed in earlier.
+--- /task ---
+
+--- task ---
+Do the same for the second `repeat`{:class="block3control"} loop, the one for `Toilet`.
+
+In the block you put into the second `repeat`{:class="block3control"} loop, click on the `1` and change it by typing in the number `2`.
+--- /task ---
+
+--- collapse ---
+---
+title: How does it work?
+---
+
+The block
+
+```blocks3
+    item (1 v) of [WaterAmounts v]
+```
+
+lets you select a thing from your list. 
+
+The number chooses which thing to select. It represents a place in the list. So item `1` is the first thing on the list, item `2` is the second, and so on.
+
+This number is called the **index**.
+
+--- /collapse ---
+
+--- task ---
+Check that your loops look like this, and then run your code to test it.
 
 ```blocks3
     go to [Tap v]
-```
-
-+ Just like you did before, drag an `item`{:class="block3variables"} block into each one — it doesn't look like you can place something else into the box, but you can! Give it a try.
-
-```blocks3
-    go to (item (1 v) of [Sprites v])
-```
-
-+ Your code should look like this now:
-
-```blocks3
-    go to (item (1 v) of [Sprites v])
     move (45) steps
     repeat (item (1 v) of [WaterAmounts v])
         move (20) steps
         stamp
         wait (0.5) secs
     end
-    go to (item (2 v) of [Sprites v])
+    go to [Toilet v]
     move (45) steps
     repeat (item (2 v) of [WaterAmounts v])
         move (20) steps
@@ -38,92 +91,8 @@ Now that you've got the water amounts in a list, you're going to put the sprite 
         wait (0.5) secs
     end
 ```
+--- /task ---
 
-Do you see that you are now using the same **index** to select the sprite name from a list and the matching water amount from the other list? This is the perfect opportunity to use a variable. Let's do that now!
+You should see it do the same thing as before! The only difference is that now you're getting the number of repeats from a list instead of having typed it directly into the `repeat`{:class="block3control"} block.
 
-+ Create a new variable called `counter`{:class="block3variables"}.
-
-+ At the start of the program, set the value of `counter`{:class="block3variables"} to `0`:
-
-```blocks3
-    when green flag clicked
-    set [counter v] to [0]
-```
-
-+ Drag the `counter`{:class="block3variables"} block into the four blocks where you get an item from a list, in place of the numbers `1` and `2`.
-
-```blocks3
-    go to (item (counter ::variables) of [Sprites v])
-```
-
-```blocks3
-    repeat (item (counter ::variables) of [WaterAmounts v])
-```
-
-One thing is still missing: the value of `counter`{:class="block3variables"} is `0` at the moment! You need to set it to the correct value before you use it each time. To do this, you will add `1`. This is also known as **incrementing**.
-
-+ Add in two `change counter by 1`{:class="block3variables"} blocks into your code so that it looks like this:
-
-```blocks3
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
-
-+ Run your code to check that everything is still working as it should! Here is what the full program should look like by now:
-
-```blocks3
-    when green flag clicked
-    set [counter v] to [0]
-    clear
-    go to x:(0) y:(0)
-    set [totalWater v] to [0]
-    set size to (80) %
-    switch costume to [monkey-a v]
-    ask [How many times do you flush the toilet each week?] and wait
-    set [flushes v] to (answer)
-    change [totalWater v] by ((flushes) * (6))
-    ask [How many minutes do you usually spend in the shower?] and wait
-    set [showerMinutes v] to (answer)
-    ask [How many showers do you have per week?] and wait
-    set [showers v] to (answer)
-    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
-    say [You use...] for (2) secs
-    say (join(totalWater) [ litres of water per week!]) for (5) secs
-    say [How about brushing your teeth?] for (2) secs
-    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
-    say [...a running tap loses 6 litres of water per minute?] for (3) secs
-    switch costume to [glass water-a v]
-    set size to (35) %
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-    change [counter v] by (1)
-    go to (item (counter) of [Sprites v])
-    move (45) steps
-    repeat (item (counter) of [WaterAmounts v])
-        move (20) steps
-        stamp
-        wait (0.5) secs
-    end
-```
-
-On the next card you will learn how to make your code even shorter with another clever loop!
+So you've managed to replace one set of numbers with a list. How about doing the same with the sprites that match up with those numbers? You'll do this in the next step!
