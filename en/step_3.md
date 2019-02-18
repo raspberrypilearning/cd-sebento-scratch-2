@@ -22,7 +22,13 @@ Let's draw a chart to help the user understand the quantities of water more easi
 
 + Then add the following blocks to the end of your code:
 
-![blocks_1546557371_301109](images/blocks_1546557371_301109.png)
+```blocks3
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
+```
 
 + Click the green flag to test your program.
 
@@ -39,12 +45,39 @@ If, like me, you don't want to go through the **whole** program every time you w
 
 + Then attach your new code directly onto the green flag.
 
-![blocks_1546557372_47151](images/blocks_1546557372_47151.png)
+```blocks3
+    when green flag clicked
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
+```
 
 + When you're ready, you can put everything back together again.
 
 
-![blocks_1546557373_613912](images/blocks_1546557373_613912.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+    change [totalWater v] by ((flushes) * (6))
+    ask [How many minutes do you usually spend in the shower?] and wait
+    set [showerMinutes v] to (answer)
+    ask [How many showers do you have per week?] and wait
+    set [showers v] to (answer)
+    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
+    say [You use...] for (2) secs
+    say (join(totalWater) [ litres of water per week!]) for (5) secs
+    say [How about brushing your teeth?] for (2) secs
+    say [It can be tempting to leave the tap running while you brush. But did you know...] for (4) secs
+    say [...a running tap loses 6 litres of water per minute?] for (3) secs
+    switch costume to [glass water-a v]
+    set size to (35) %
+```
 
 **Note**: you should be careful when doing this, as sometimes there might be blocks that you need to run in the code you're moving aside — you'll need to keep them in your script to avoid problems!
 
@@ -66,7 +99,15 @@ To use the Pen blocks in Scratch, you need add the **Pen extension**.
 
 ![pen extension blocks](images/pen-extension-blocks.png)
 
-![blocks_1546557374_947648](images/blocks_1546557374_947648.png)
+```blocks3
+    go to [Tap v]
+    move (45) steps
+    repeat (6)
+        move (20) steps
+        stamp
+        wait (0.5) secs
+    end
+```
 
 + Click the green flag to watch your new animation!
 
@@ -87,7 +128,11 @@ You can double-click the `clear`{:class="block3extensions"} block to remove ever
 
 + Whenever you run your code again, you'll see that the stamped glasses are still there at the start. To clear them away, add the `clear`{:class="block3extensions"} block to the top of your script, right after the green flag. You can reset the position of the sprite to the centre as well using a `go to`{:class="block3motion"} block.
 
-![blocks_1546557376_042138](images/blocks_1546557376_042138.png)
+```blocks3
+    when green flag clicked
+    clear
+    go to x:(0) y:(0)
+```
 
 + Add similar code to make the sprite illustrate the amount of water that's used by flushing the toilet (remember, one flush uses 6 litres).
 
@@ -105,7 +150,15 @@ You can double-click the `clear`{:class="block3extensions"} block to remove ever
 
 + Here is the code you need to add:
 
-![blocks_1546557377_116862](images/blocks_1546557377_116862.png)
+```blocks3
+    go to [Toilet v]
+    move (45) steps
+    repeat (6)
+        move (20) steps
+        stamp
+        wait (0.5) secs
+    end
+```
 
 --- /hint ---
 

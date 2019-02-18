@@ -10,7 +10,12 @@ On this card you'll make the water usage calculator. To personalise the calculat
 
 + Click on the Scripts tab and add the following blocks to your sprite. You will find the `ask and wait`{:class="block3sensing"} block in the **Sensing** category.
 
-![blocks_1546557354_089385](images/blocks_1546557354_089385.png)
+```blocks3
+    when green flag clicked
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [What's your name?] and wait
+```
 
 + Change the question to `How many times do you flush the toilet each week?`.
 
@@ -26,31 +31,62 @@ You've asked the user for information — now you need to get the answer!
 
 + Plug the block into your code like this:
 
-![blocks_1546557357_880265](images/blocks_1546557357_880265.png)
+```blocks3
+    when green flag clicked
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+```
 
 Time for a bit of math! First you need somewhere to store a total.
 
 + Create another variable called `totalWater`{:class="block3variables"} and set its value to `0` at the start of the program.
 
-![blocks_1546557359_022644](images/blocks_1546557359_022644.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+```
 
 + Go to **Operators** and look for this block:
 
-![blocks_1546557360_099408](images/blocks_1546557360_099408.png)
+```blocks3
+    () * ()
+```
 
 It lets you **multiply** two numbers.
 
 + Drag it into a `change totalWater by`{:class="block3variables"} block, like this:
 
-![blocks_1546557361_1554601](images/blocks_1546557361_1554601.png)
+```blocks3
+    change [totalWater v] by (() * ())
+```
 
 + Plug your `flushes`{:class="block3variables"} block into one side of the operator block and on the other side, type in the number `6`. 6 litres is roughly how much water is used for one toilet flush.
 
-![blocks_1546557362_229057](images/blocks_1546557362_229057.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+    change [totalWater v] by ((flushes) * (6))
+```
 
 + Finish off the script with a couple of `say`{:class="block3looks"} blocks to tell the user the result! You'll find the `join`{:class="block3operators"} block in **Operators**.
 
-![blocks_1546557363_380522](images/blocks_1546557363_380522.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+    change [totalWater v] by ((flushes) * (6))
+    say [You use...] for (2) secs
+    say (join(totalWater) [ litres of water each week!]) for (5) secs
+```
 
 + Click the green flag to test your code.
 
@@ -70,7 +106,10 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 + Use the `ask and wait`{:class="block3sensing"} and `answer`{:class="block3sensing"} blocks to get the information from the user and store it in the new variable.
 
-![blocks_1546557364_5450208](images/blocks_1546557364_5450208.png)
+```blocks3
+    ask [How many showers do you have per week?] and wait
+    set [showers v] to (answer)
+```
 
 --- /hint ---
 
@@ -78,11 +117,15 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 + To calculate the amount of water used on showering, you'll need to multiply the number of showers by `35` (the amount of water for one five-minute shower).
 
-![blocks_1546557365_625803](images/blocks_1546557365_625803.png)
+```blocks3
+    (showers) * (35)
+```
 
 + You can add the result to your total like this:
 
-![blocks_1546557366_6974761](images/blocks_1546557366_6974761.png)
+```blocks3
+    change [totalWater v] by ((showers ::variables) * (35))
+```
 
 --- /hint ---
 
@@ -90,7 +133,20 @@ A shower uses about 7 litres per minute, so a five-minute shower uses around 35 
 
 Your code should look something like this now:
 
-![blocks_1546557367_765322](images/blocks_1546557367_765322.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+    change [totalWater v] by ((flushes) * (6))
+    ask [How many showers do you have per week?] and wait
+    set [showers v] to (answer)
+    change [totalWater v] by ((showers) * (35))
+    say [You use...] for (2) secs
+    say (join(totalWater) [ litres of water per week!]) for (5) secs
+```
 
 --- /hint ---
 
@@ -98,11 +154,28 @@ Your code should look something like this now:
 
 If you want to, you can also ask them how many minutes they spend in the shower! In that case, you would need to do an extra calculation: multiply the number of minutes by `7` (litres per minute in the shower), and then multiply the result by the number of showers. You can put an operator inside an operator to do that, like this:
 
-![blocks_1546557368_956173](images/blocks_1546557368_956173.png)
+```blocks3
+    (showers) * ((showerMinutes ::variables) * (7))
+```
 
 Here's how your code would look:
 
-![blocks_1546557370_066096](images/blocks_1546557370_066096.png)
+```blocks3
+    when green flag clicked
+    set [totalWater v] to [0]
+    set size to (80) %
+    switch costume to [monkey-a v]
+    ask [How many times do you flush the toilet each week?] and wait
+    set [flushes v] to (answer)
+    change [totalWater v] by ((flushes) * (6))
+    ask [How many minutes do you usually spend in the shower?] and wait
+    set [showerMinutes v] to (answer)
+    ask [How many showers do you have per week?] and wait
+    set [showers v] to (answer)
+    change [totalWater v] by ((showers) * ((showerMinutes) * (7)))
+    say [You use...] for (2) secs
+    say (join(totalWater) [ litres of water per week!]) for (5) secs
+```
 --- /hint ---
 
 --- /hints ---
