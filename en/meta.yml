@@ -15,6 +15,8 @@ last_tested: "2018-04-12"
 steps:
   - title: Introduction
   - title: Getting information from the user
+  - title: "Challenge: add more water uses to the calculation"
+    challenge: true
   - title: Draw a chart
   - title: Using a list
   - title: Matching things up
