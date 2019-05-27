@@ -6,9 +6,9 @@ On this card you'll make a few small changes to control things like the speed of
 Change the number of steps after the `stamp`{:class="block3extensions"} from `20` to `4`. You'll probably need make the first `move`{:class="block3motion"} bigger, maybe `60` instead of `45`, to get the glass of water out from behind the text sprite again.
 --- /task ---
 
---- /task ---
-Move the `wait`{:class="block3control"} out of the first loop and put it after the loop instead, but still inside the `repeat until`{:class="block3control"} loop, and change the value to `1` or `2` seconds, or whatever you like.
 --- task ---
+Move the `wait`{:class="block3control"} out of the first loop and put it after the loop instead, but still inside the `repeat until`{:class="block3control"} loop, and change the value to `1` or `2` seconds, or whatever you like.
+--- /task ---
 
 --- task ---
 Test it out, and change the numbers to suit you!
