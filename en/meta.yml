@@ -1,3 +1,4 @@
+---
 title: Water use calculator
 hero_image: images/banner.png
 description: Make a water usage calculator, with animated charts.
@@ -11,14 +12,18 @@ site_areas: coderdojo, projects
 hardware: ''
 software: scratch
 version: 3.0.0
-last_tested: "2018-04-12"
+last_tested: '2018-04-12'
 steps:
-  - title: Introduction
-  - title: Getting information from the user
-  - title: "Challenge: add more water uses to the calculation"
-    challenge: true
-  - title: Draw a chart
-  - title: Using a list
-  - title: Matching things up
-  - title: Repetition is key
-  - title: Final tweaks
+- title: Introduction
+- title: Getting information from the user
+- title: 'Challenge: add more water uses to the calculation'
+  challenge: true
+- title: Draw a chart
+  completion:
+  - engaged
+- title: Using a list
+- title: Matching things up
+- title: Repetition is key
+- title: Final tweaks
+  completion:
+  - internal
