@@ -15,13 +15,15 @@ version: 3.0.0
 last_tested: '2018-04-12'
 steps:
 - title: Introduction
-  completion: engaged
 - title: Getting information from the user
 - title: 'Challenge: add more water uses to the calculation'
   challenge: true
 - title: Draw a chart
+  completion:
+  - engaged
 - title: Using a list
 - title: Matching things up
 - title: Repetition is key
-  completion: internal
 - title: Final tweaks
+  completion:
+  - internal
